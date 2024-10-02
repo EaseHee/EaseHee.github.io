@@ -46,3 +46,9 @@ nav:
 
   - title: About
     url: /about
+
+collections:
+  posts:
+    output: true
+    permalink: /:year/:month/:day/:title/
+    order: ascending # 추가: 게시글 정렬을 오름차순으로 설정
