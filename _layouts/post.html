@@ -5,7 +5,19 @@ layout: default
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
+  
+  <div class="navigation">
+    {% if page.previous %}
+      <a href="{{ page.previous.url }}">이전 글</a> : {{ page.previous.title }}
+    {% endif %}
+    <br>
+    {% if page.next %}
+      <a href="{{ page.next.url }}">다음 글</a> : {{ page.next.title }}
+    {% endif %}
+  </div>
+
   {{ content }}
+
 </article>
 
 {% if site.related_posts != empty %}

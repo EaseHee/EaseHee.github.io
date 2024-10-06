@@ -4,7 +4,7 @@
  <title>Dark Poole</title>
  <link href="/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2024-10-04T00:40:38+09:00</updated>
+ <updated>2024-10-06T23:21:52+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Mark Otto</name>
@@ -13,13 +13,11 @@
 
  
  <entry>
-   <title>Java_02_</title>
-   <link href="http://localhost:4000/2024/10/04/Java_01/"/>
-   <updated>2024-10-04T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2024/10/04/Java_01</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;/2024/10/03/Java_02/&quot;&gt;이전 글&lt;/a&gt; &lt;a href=&quot;&quot;&gt;다음 글&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+   <title>Java_03_클래스</title>
+   <link href="http://localhost:4000/2024/10/06/Java_03/"/>
+   <updated>2024-10-06T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2024/10/06/Java_03</id>
+   <content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -29,13 +27,27 @@
  </entry>
  
  <entry>
-   <title>Java_01_자바와 객체 지향</title>
-   <link href="http://localhost:4000/2024/10/03/Java_02/"/>
-   <updated>2024-10-03T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2024/10/03/Java_02</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;/2024/10/03/Java_00/&quot;&gt;이전 글&lt;/a&gt; &lt;a href=&quot;/2024/10/04/Java_01/&quot;&gt;다음 글&lt;/a&gt;&lt;/p&gt;
+   <title>Java_02_자바 가상 머신</title>
+   <link href="http://localhost:4000/2024/10/05/Java_02/"/>
+   <updated>2024-10-05T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2024/10/05/Java_02</id>
+   <content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;dt&gt;자바 가상 머신&lt;dd&gt;
+&lt;/dd&gt;&lt;/dt&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Java_01_자바와 객체 지향</title>
+   <link href="http://localhost:4000/2024/10/04/Java_01/"/>
+   <updated>2024-10-04T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2024/10/04/Java_01</id>
+   <content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -196,7 +208,7 @@
 이 경우 부모가 구체적인 기능을 수행하고 있고 자식이 이를 상속하게 된다면 &lt;br /&gt;
 자식은 해당 기능을 오버라이딩하지 않고 상속받아 사용할 수 있다.&lt;br /&gt;
 하지만 자식이 다른 기능으로 변경하기 위해서는 다른 부모를 상속해야 하고&lt;br /&gt;
-현재 부모를 상속함으로 수핼할 수 있던 구체적인 기능 의존 관계에 의해 문제가 생기게 된다.&lt;br /&gt;
+현재 부모를 상속함으로 수행할 수 있던 구체적인 기능이 의존 관계에 의해 문제가 생기게 된다.&lt;br /&gt;
 만약 여러 객체에서 필요로 하는 기능이 있다면 해당 기능의 공통점을 추상화하여 인터페이스로 분리하는 것이  &lt;br /&gt;
 해당 인터페이스만 구현하는 것으로 동일한 기능을 구현하면서도 다른 부모를 상속하더라도 기능을 정상적으로 수행할 수 있게 된다.&lt;/p&gt;
 </content>
@@ -207,13 +219,22 @@
    <link href="http://localhost:4000/2024/10/03/Java_00/"/>
    <updated>2024-10-03T00:00:00+09:00</updated>
    <id>http://localhost:4000/2024/10/03/Java_00</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;/2024/10/03/Introduction_EN/&quot;&gt;이전 글&lt;/a&gt; &lt;a href=&quot;/2024/10/03/Java_02/&quot;&gt;다음 글&lt;/a&gt;&lt;/p&gt;
+   <content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
 &lt;h3 id=&quot;프로그래밍을-배우며&quot;&gt;프로그래밍을 배우며&lt;/h3&gt;
 &lt;blockquote&gt;
-
+  &lt;p&gt;컴퓨터는 기계다. &lt;br /&gt;
+처음 프로그래밍을 배울 때 1+1을 입력하고 왜 화면에 2라고 나오지 않는지 의아해했다. &lt;br /&gt;
+컴퓨터는 1+1이라는 말을 들었을 때 2라고 말을 해주지 않는다. &lt;br /&gt;
+2를 말해달라는 건지 2에 10을 곱해달라는 건지 알지 못하기 때문에 일단 기다린다. &lt;br /&gt;
+그리고 console.log(1+1) 혹은 System.out.print(1+1)과 같이 &lt;br /&gt;
+콘솔 화면에 출력해달라는 명령을 해야 비로소 1+1의 연산결과를 화면에 출력해준다. &lt;br /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;나에게&quot;&gt;나에게&lt;/h3&gt;
@@ -222,8 +243,8 @@
   &lt;ul&gt;
     &lt;li&gt;백문 불여 일타 | 프로그래밍은 손으로 배운다 &lt;br /&gt;
 보거나 들은 내용이 아무리 많아도 한번 직접 구현해본 것만 못하다. &lt;br /&gt;
-&lt;strong&gt;&lt;em&gt;궁금한 부분이 생기면 찾아보기 전에 직접 코드를 작성해보고,&lt;/em&gt;&lt;/strong&gt; &lt;br /&gt;
-&lt;strong&gt;&lt;em&gt;떠오르는 생각이 있다면 생각에 그치지 말고 직접 코드를 작성해 보자.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;strong&gt;&lt;em&gt;궁금한 부분이 생기면 찾아보기 전에 직접 코드를 작성해보고 &lt;br /&gt;
+떠오르는 생각이 있다면 생각에 그치지 말고 직접 코드를 작성해 보자.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
 
@@ -231,73 +252,24 @@
   &lt;ul&gt;
     &lt;li&gt;GIGO : Garbage In Garbage Out &lt;br /&gt;
 쓰레기를 넣으면 쓰레기가 나온다. &lt;br /&gt;
-&lt;strong&gt;&lt;em&gt;컴뮤터는 잘못이 없다. 문제가 생기면 나의 코드를 돌아보자.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;strong&gt;&lt;em&gt;컴퓨터는 잘못이 없다. 문제가 생기면 나의 코드를 돌아보자.&lt;/em&gt;&lt;/strong&gt;&lt;/li&gt;
   &lt;/ul&gt;
 &lt;/blockquote&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Introduction</title>
-   <link href="http://localhost:4000/2024/10/03/Introduction_EN/"/>
-   <updated>2024-10-03T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2024/10/03/Introduction_EN</id>
-   <content type="html">&lt;h2 id=&quot;thisisheeegithubio-_-한글로-보기&quot;&gt;ThIsIsHeEe.github.io _ &lt;a href=&quot;/2024/10/03/Introduction&quot;&gt;한글로 보기&lt;/a&gt;&lt;/h2&gt;
-&lt;h4 id=&quot;theme--darkpoole&quot;&gt;(Theme : &lt;a href=&quot;/DarkPoole.md&quot;&gt;DarkPoole&lt;/a&gt;)&lt;/h4&gt;
-
-&lt;h3 id=&quot;welcome-to-my-personal-space-for-consideration&quot;&gt;Welcome to my personal space for consideration.&lt;/h3&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;&lt;strong&gt;TODO&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Study programming&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;HTML5&lt;/li&gt;
-    &lt;li&gt;CSS3&lt;/li&gt;
-    &lt;li&gt;JavaScript (ECMA6)&lt;/li&gt;
-    &lt;li&gt;MariaDB (MYSQL)&lt;/li&gt;
-    &lt;li&gt;Java
-&lt;br /&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://github.com/ThIsIsHeEe/TeamProject.git&quot;&gt;Team Project&lt;/a&gt;&lt;/p&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Project subject : ERP(Enterprise Resource Planning) for micro enterprise
-&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/2024/10/03/Java_00&quot;&gt;Intro&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;To myself face up to challenge&lt;/strong&gt;
-&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;If I do just what I can, I won’t be better than I was.&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
-&lt;strong&gt;&lt;em&gt;I’m here to change myself, I won’t escape anything.&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;strong&gt;I trust me.&lt;br /&gt; If I believe, I can.&lt;/strong&gt;&lt;/p&gt;
 </content>
  </entry>
  
  <entry>
    <title>소개 글</title>
-   <link href="http://localhost:4000/2024/10/03/Introduction/"/>
-   <updated>2024-10-03T00:00:00+09:00</updated>
-   <id>http://localhost:4000/2024/10/03/Introduction</id>
-   <content type="html">&lt;h2 id=&quot;thisisheeegithubio-_-in-english&quot;&gt;ThIsIsHeEe.github.io _ &lt;a href=&quot;/2024/10/03/Introduction_EN&quot;&gt;in English&lt;/a&gt;&lt;/h2&gt;
-&lt;h4 id=&quot;테마--darkpoole&quot;&gt;(테마 : &lt;a href=&quot;/DarkPoole.md&quot;&gt;DarkPoole&lt;/a&gt;)&lt;/h4&gt;
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+   <link href="http://localhost:4000/2024/10/02/Introduction/"/>
+   <updated>2024-10-02T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2024/10/02/Introduction</id>
+   <content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;이건희의-깃허브-페이지를-찾아주셔서-감사합니다&quot;&gt;이건희의 깃허브 페이지를 찾아주셔서 감사합니다.&lt;/h3&gt;
+&lt;h2 id=&quot;thisisheeegithubio&quot;&gt;ThIsIsHeEe.github.io&lt;/h2&gt;
+&lt;h4 id=&quot;테마--darkpoole&quot;&gt;(테마 : &lt;a href=&quot;/DarkPoole&quot;&gt;DarkPoole&lt;/a&gt;)&lt;/h4&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -325,11 +297,8 @@
 
 &lt;hr /&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;/2024/10/03/Java_00&quot;&gt;자바에 들어가기 앞서&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;도전에 앞서 할 수 있냐고 묻는 나에게&lt;/strong&gt;

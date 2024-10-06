@@ -4,6 +4,8 @@
 
 ### Welcome to my personal space for consideration.
 
+PageLink : [https://ThIsIsHeEe.github.io](https://ThIsIsHeEe.github.io)
+
 ---
 
 **TODO**
@@ -13,17 +15,3 @@
 - Issues-handling
 
 ---
-
-## Contents
-
-- [Introduction](/_posts/contents_00_intro/EN/2024-10-03-Introduction_EN.markdown)
-
-
-<br><br><br><br>
-
-**To myself face up to challenge**
-<br><br>
-
-***If I do just what I can, I won't be better than I was.***<br>
-***I'm here to change myself, I won't escape anything.***<br><br>
-**I trust me.<br> If I believe, I can.**

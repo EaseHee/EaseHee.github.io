@@ -1,15 +1,17 @@
 ---
 layout: post
 title: "소개 글"
-date: 2024-10-03
+date: 2024-10-02
 categories: blog
 ---
 
-## ThIsIsHeEe.github.io
-#### (테마 : [DarkPoole](/DarkPoole))
 <br>
 
 ### 이건희의 깃허브 페이지를 찾아주셔서 감사합니다.
+## ThIsIsHeEe.github.io
+#### (테마 : [DarkPoole](/DarkPoole))
+
+<br>
 
 ---
     
@@ -29,7 +31,6 @@ categories: blog
 
 ---
 
-- [자바에 들어가기 앞서](/2024/10/03/Java_00)
 
 <br><br><br><br>
 <br><br><br><br>

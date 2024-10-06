@@ -4,6 +4,8 @@
 
 ### Welcome to my personal space for consideration.
 
+PageLink : [https://ThIsIsHeEe.github.io](https://ThIsIsHeEe.github.io)
+
 ---
 
 **TODO**
@@ -13,7 +15,3 @@
 - Issues-handling
 
 ---
-
-## Contents
-
-- [Introduction](/_posts/contents_00_intro/EN/2024-10-03-Introduction_EN.markdown)
