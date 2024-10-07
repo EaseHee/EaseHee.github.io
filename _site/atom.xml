@@ -4,7 +4,7 @@
  <title>Dark Poole</title>
  <link href="/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2024-10-07T22:23:23+09:00</updated>
+ <updated>2024-10-07T22:40:24+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Mark Otto</name>
@@ -82,7 +82,7 @@
 &lt;p&gt;명령 프롬프트 화면이 두렵고 어려웠던 입문자에게 &lt;br /&gt;
 메모장과 프롬프트로 자바라는 언어가 동작했다는 건 너무나 큰 충격이었다. &lt;br /&gt;
 &lt;br /&gt;
-코드 작성프로그램인 VS Code가 언어를 배우는 정도라고 생각했던 무지했던 나를 돌아보았다. &lt;br /&gt;
+코드 작성프로그램인 VS Code가 언어를 배우는 정도(正道)라고 생각했던 나를 돌아보았다. &lt;br /&gt;
 그렇게 컴퓨터와 대화하는 프로그래밍이라는 분야가 정말 흥미롭게 다가왔다. &lt;br /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
@@ -420,7 +420,9 @@ JRE는 자바 실행(런타임) 환경으로 자바 어플리케이션을 실행
 &lt;h2 id=&quot;thisisheeegithubio&quot;&gt;ThIsIsHeEe.github.io&lt;/h2&gt;
 &lt;h4 id=&quot;테마--darkpoole&quot;&gt;(테마 : &lt;a href=&quot;/DarkPoole&quot;&gt;DarkPoole&lt;/a&gt;)&lt;/h4&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;a href=&quot;/2024/10/03/Java_00&quot;&gt;[첫 글 보러가기]&lt;/a&gt;
+&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
