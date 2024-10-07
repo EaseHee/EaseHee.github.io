@@ -105,7 +105,7 @@ You can easily customize the navbar by tweaking the `_config.yml` file. Simply c
 
 ```yaml
 nav:
-  - title: Blog
+  - title: Archive
     url: /archive
 
   - title: About

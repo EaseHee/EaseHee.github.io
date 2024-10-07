@@ -4,7 +4,7 @@
  <title>Dark Poole</title>
  <link href="/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2024-10-06T23:21:52+09:00</updated>
+ <updated>2024-10-07T22:23:23+09:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Mark Otto</name>
@@ -13,7 +13,23 @@
 
  
  <entry>
-   <title>Java_03_클래스</title>
+   <title>Java_04_클래스와 인스턴스</title>
+   <link href="http://localhost:4000/2024/10/07/Java_04/"/>
+   <updated>2024-10-07T00:00:00+09:00</updated>
+   <id>http://localhost:4000/2024/10/07/Java_04</id>
+   <content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;dt&gt;
+&lt;/dt&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Java_03_자바와 메모장</title>
    <link href="http://localhost:4000/2024/10/06/Java_03/"/>
    <updated>2024-10-06T00:00:00+09:00</updated>
    <id>http://localhost:4000/2024/10/06/Java_03</id>
@@ -23,6 +39,82 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;dt&gt;&quot;자바는 클래스로 시작해서 클래스로 끝난다.&quot;&lt;dd&gt;
+자바를 배우는 첫 날 들은 말이다.
+&lt;/dd&gt;
+
+자바를 배우기 전 html, css, javascript의 기초에 대해서 먼저 다루었다.&lt;br /&gt;
+당시 사용했던 코드 작성 프로그램인 VS Code에서는 프로그램에서 제공하는 기본 스니펫을 통해 &lt;br /&gt;
+아래와 같이 파일의 기본 프레임을 생성할 수 있었다.&lt;br /&gt;
+&lt;/dt&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;! + Enter&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;xmp&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;/xmp&gt;
+
+&lt;p&gt;&lt;br /&gt;
+그런데 선생님께서 자바 수업을 시작하면서 메모장을 켜셨다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2024-08-09-Java-Class-00.png&quot; /&gt;
+&lt;br /&gt;
+아직 컴파일은 하지도 않았는데도 온몸에 전율이 흘렀다..
+&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div style=&quot;border: 2px solid white;&quot;&gt;
+    &lt;img src=&quot;/assets/2024-08-09-Java-Class-000.png&quot; /&gt;
+&lt;/div&gt;
+&lt;p&gt;울었다.&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;명령 프롬프트 화면이 두렵고 어려웠던 입문자에게 &lt;br /&gt;
+메모장과 프롬프트로 자바라는 언어가 동작했다는 건 너무나 큰 충격이었다. &lt;br /&gt;
+&lt;br /&gt;
+코드 작성프로그램인 VS Code가 언어를 배우는 정도라고 생각했던 무지했던 나를 돌아보았다. &lt;br /&gt;
+그렇게 컴퓨터와 대화하는 프로그래밍이라는 분야가 정말 흥미롭게 다가왔다. &lt;br /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;송정우 선생님. 감사합니다. 
+&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div style=&quot;border: 2px solid white;&quot;&gt;
+    &lt;img src=&quot;/assets/2024-08-09-Java-Class-01.png&quot; /&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;너무 신기해서 수업을 들으며 작성한 주석이 수업 내용을 가렸다..&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div style=&quot;border: 2px solid white;&quot;&gt;
+    &lt;img src=&quot;/assets/2024-08-09-Java-Class-02.png&quot; /&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;자바 스크립트에서 배웠던 내용을 어떻게든 떠올려보며 이것 저것 시험해보았다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;div style=&quot;border: 2px solid white;&quot;&gt;
+    &lt;img src=&quot;/assets/2024-08-09-Java-Class-03.png&quot; /&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;당시에는 가볍게 넘어갔던 컴파일, 런타임, JVM에 대한 부분이 자바 실행 과정의 정말 중요한 핵심이었고 &lt;br /&gt;
+컴파일러가 생성한 바이트코드는 이후 의존관계에서 크게 데이면서 다시금 중요성을 깨닫게 되었다.&lt;/p&gt;
 </content>
  </entry>
  
@@ -37,8 +129,64 @@
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;dt&gt;자바 가상 머신&lt;dd&gt;
+&lt;dt&gt;자바 가상 머신 (JVM : Java Virtual Machine)&lt;dd&gt;
+컴퓨터는 0과 1의 이진수로 된 기계어(Binary Code)만 읽을 수 있기 때문에 &lt;br /&gt;
+자바나 C, Python과 같은 언어로 작성된 소스를 기계어로 변환하는 과정이 필요하다.&lt;br /&gt;
+C나 C++의 경우 프로그램이 직접 운영체제(OS : Operating System)에 &lt;br /&gt;
+맞는 기계어로 번역하기 때문에 운영체제간 호환이 어렵다고 한다.&lt;br /&gt;
+&lt;br /&gt;
+하지만 자바의 경우 자바 가상 머신이라는 별도의 메모리 공간이 존재하여 &lt;br /&gt;
+프로그램에서 운영체제로 직접 기계어를 변환하는 것이 아니라 &lt;br /&gt;
+자바 가상 머신에서 각 운영체제에 맞는 기계어로 변환한다.&lt;br /&gt;
+즉, 운영체제가 달라도 동일하게 소스코드를 작성할 수 있고 &lt;br /&gt;
+자바의 모토인 &lt;strong&gt;Write Once, Read Anywhere.&lt;/strong&gt; &lt;br /&gt;
+운영체제와는 독립적으로 실행할 수 있다.&lt;br /&gt;
 &lt;/dd&gt;&lt;/dt&gt;
+
+&lt;blockquote&gt;
+
+  &lt;p&gt;&lt;strong&gt;자바 개발 모음&lt;/strong&gt; (JDK : Java Development Kit) &lt;br /&gt;
+&lt;strong&gt;자바 실행 환경&lt;/strong&gt; (JRE : Java Runtime Environment)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;dd&gt;
+JDK는 컴파일러와 실행 환경, 개발 도구(jar, javadoc 등)로 구성되어 있다.&lt;br /&gt;
+컴파일은 자바 언어로 된 소스 코드(.java)를 JVM에 전달하기 위한 바이트코드(.class)로 변환하는 과정이다.&lt;br /&gt;
+프로그램이 실행되는 런타임 시점과는 다르다. 
+&lt;/dd&gt;
+
+&lt;dd&gt;
+JRE은 JVM과 Java의 여러 라이브러리들로 구성되어 있다.&lt;br /&gt;
+JRE는 자바 실행(런타임) 환경으로 자바 어플리케이션을 실행하기 위한 최소한의 실행 환경을 제공한다.&lt;br /&gt;
+&lt;/dd&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;text-center&quot;&gt;
+    &lt;img src=&quot;/assets/JVM 구성 모식도.png&quot; class=&quot;image-responsive&quot; /&gt;
+    &lt;span&gt;
+        자바 가상 머신 구조 모식도&lt;br /&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;자바 프로그램의 실행 과정 &lt;br /&gt;
+1&amp;gt; 프로그램 실행 : OS로 부터 메모리 할당 (JVM) &lt;br /&gt;
+2&amp;gt; 자바 소스(.java) -&amp;gt; 컴파일(javac) -&amp;gt; 바이트 코드(.class) &lt;br /&gt;
+3&amp;gt; 바이트 코드 -&amp;gt; [JVM]  Class Loader -&amp;gt; Runtime Data Area -&amp;gt; Execution &lt;br /&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;자바는 사용되지 않는 메모리 자원을 &lt;br /&gt; Execution 엔진 영역의 Garbage Collector를 통해 정리한다. &lt;br /&gt;&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;[참고 사이트]&lt;br /&gt;
+&lt;a href=&quot;https://cafe.daum.net/flowlife/HqLo/3&quot;&gt;cafe.daum.net/flowlife&lt;/a&gt; &lt;br /&gt;
+&lt;a href=&quot;https://velog.io/@jungmyeong96/JAVA%EA%B8%B0%EC%B4%88-JVM%EC%9D%B4%EB%9E%80&quot;&gt;velog.io/@jungmyeong96&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
  
@@ -222,6 +370,9 @@
    <content type="html">&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
 &lt;h3 id=&quot;프로그래밍을-배우며&quot;&gt;프로그래밍을 배우며&lt;/h3&gt;
 &lt;blockquote&gt;
   &lt;p&gt;컴퓨터는 기계다. &lt;br /&gt;
@@ -278,10 +429,10 @@
 &lt;blockquote&gt;
   &lt;p&gt;프로그래밍 공부&lt;/p&gt;
   &lt;ul&gt;
-    &lt;li&gt;HTML5&lt;/li&gt;
-    &lt;li&gt;CSS3&lt;/li&gt;
+    &lt;li&gt;HTML&lt;/li&gt;
+    &lt;li&gt;CSS&lt;/li&gt;
     &lt;li&gt;JavaScript (ECMA6)&lt;/li&gt;
-    &lt;li&gt;MariaDB (MYSQL)&lt;/li&gt;
+    &lt;li&gt;MariaDB (MYSQL) : RDBMS&lt;/li&gt;
     &lt;li&gt;Java
 &lt;br /&gt;&lt;/li&gt;
   &lt;/ul&gt;

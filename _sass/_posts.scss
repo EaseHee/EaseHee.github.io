@@ -65,3 +65,28 @@
     }
   }
 }
+
+.image-responsive {
+  max-width: 80%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.image-large, .image-midium {
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.image-large {
+  max-width: 60vw;
+}
+
+.image-medium {
+  max-width: 40vw;
+}

@@ -18,10 +18,10 @@ categories: blog
 ### 생각 정리를 위한 공간
 
 > 프로그래밍 공부
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript (ECMA6)
-- MariaDB (MYSQL)
+- MariaDB (MYSQL) : RDBMS
 - Java
 <br>
 
