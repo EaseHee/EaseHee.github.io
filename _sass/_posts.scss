@@ -77,16 +77,14 @@
   text-align: center;
 }
 
-.image-large, .image-midium {
+.image-container {
+  text-align: center;
+}
+
+.image-midium {
+  max-width: 40%;
+  min-width: 20%;
   height: auto;
-  display: block;
+  display: inline;
   margin: 0 auto;
-}
-
-.image-large {
-  max-width: 60vw;
-}
-
-.image-medium {
-  max-width: 40vw;
 }
