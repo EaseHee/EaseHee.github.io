@@ -19,7 +19,7 @@ categories: blog
     
 ### 생각 정리를 위한 공간
 
-> 프로그래밍 공부
+> [프로그래밍 공부](https://github.com/ThIsIsHeEe/acorn)
 - HTML
 - CSS
 - JavaScript (ECMA6)
