@@ -8,7 +8,7 @@ categories: blog
 <br>
 
 ### 이건희의 깃허브 페이지를 찾아주셔서 감사합니다.
-## ThIsIsHeEe.github.io
+## EaseHee.github.io
 #### (테마 : [DarkPoole](/DarkPoole))
 
 <br>
@@ -19,7 +19,7 @@ categories: blog
     
 ### 생각 정리를 위한 공간
 
-> [프로그래밍 공부](https://github.com/ThIsIsHeEe/acorn)
+> [프로그래밍 공부](https://github.com/EaseHee/acorn)
 - HTML
 - CSS
 - JavaScript (ECMA6)
@@ -27,7 +27,7 @@ categories: blog
 - Java
 <br>
 
-> [팀 프로젝트](https://github.com/ThIsIsHeEe/TeamProject.git)
+> [팀 프로젝트](https://github.com/EaseHee/TeamProject.git)
 * 프로젝트 주제 : 소상공인을 위한 ERP 시스템
 <br><br>
 

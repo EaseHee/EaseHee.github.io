@@ -1,10 +1,10 @@
-## ThIsIsHeEe.github.io _ [in English](/README_EN.md)
+## EaseHee.github.io _ [in English](/README_EN.md)
 #### (테마 : [DarkPoole](/DarkPoole.md))
 <br>
 
 ### 이건희의 깃허브 페이지를 찾아주셔서 감사합니다.
 
-페이지 주소 : [https://ThIsIsHeEe.github.io](https://ThIsIsHeEe.github.io)
+페이지 주소 : [https://EaseHee.github.io](https://EaseHee.github.io)
 
 ---
 
