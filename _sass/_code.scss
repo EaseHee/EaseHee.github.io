@@ -9,14 +9,14 @@ pre {
 }
 
 code {
-  font-size: 85%;
+  font-size: 90%;
 }
 
 pre {
   display: block;
   margin-top: 0;
   margin-bottom: var(--spacer-3);
-  overflow: auto;
+  // overflow: auto; // (_layout.scss에서 직접 정의) white-space: nowrap; overflow-x: scroll;
 }
 
 .highlight {

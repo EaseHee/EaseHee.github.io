@@ -19,7 +19,7 @@ categories: blog
     
 ### 생각 정리를 위한 공간
 
-> [프로그래밍 공부](https://github.com/EaseHee/acorn)
+> [프로그래밍 공부](https://github.com/EaseHee/)
 - HTML
 - CSS
 - JavaScript (ECMA6)
@@ -34,6 +34,7 @@ categories: blog
 ---
 
 
+<br><br><br><br>
 <br><br><br><br>
 <br><br><br><br>
 <br><br><br><br>
