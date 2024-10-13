@@ -27,12 +27,14 @@ HTML4 이전에는 &lt;div&gt;나 &lt;span&gt; 등이 사용. <br>
 - Semantic Tag 용레
 <pre><code>
 &lt;main&gt;
-    &lt;h2&gt;이 페이지의 주요 콘텐츠&lt;/h2&gt;
-    &lt;p&gt;여기에 페이지의 핵심 내용이 들어갑니다.&lt;/p&gt;
+    &lt;h2&gt;main태그의 헤드 부분&lt;/h2&gt;
+    &lt;p&gt;paragraph 태그 내 컨텐츠 작성&lt;/p&gt;
 &lt;/main&gt;
+</code></pre>
 
+<pre><code>
 &lt;header&gt;
-    &lt;h1&gt;웹사이트 이름&lt;/h1&gt;
+    &lt;h1&gt;header태그의 헤드 부분 (사이트 이름)&lt;/h1&gt;
     &lt;nav&gt;
         &lt;ul&gt;
             &lt;li&gt;&lt;a href="#">홈&lt;/a&gt;&lt;/li&gt;
@@ -41,7 +43,9 @@ HTML4 이전에는 &lt;div&gt;나 &lt;span&gt; 등이 사용. <br>
         &lt;/ul&gt;
     &lt;/nav&gt;
 &lt;/header&gt;
+</code></pre>
 
+<pre><code>
 &lt;footer&gt;
     &lt;p&gt;&copy; 2024 회사명. All rights reserved.&lt;/p&gt;
     &lt;nav&gt;
@@ -51,7 +55,9 @@ HTML4 이전에는 &lt;div&gt;나 &lt;span&gt; 등이 사용. <br>
         &lt;/ul&gt;
     &lt;/nav&gt;
 &lt;/footer&gt;
+</code></pre>
 
+<pre><code>
 &lt;nav&gt;
     &lt;ul&gt;
         &lt;li&gt;&lt;a&gt;href="#">홈&lt;/a&gt;&lt;/li&gt;
@@ -59,17 +65,23 @@ HTML4 이전에는 &lt;div&gt;나 &lt;span&gt; 등이 사용. <br>
         &lt;li&gt;&lt;a&gt;href="#">연락처&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/nav&gt;
+</code></pre>
 
+<pre><code>
 &lt;article&gt;
     &lt;h2&gt;블로그 포스트 제목&lt;/h2&gt;
     &lt;p&gt;이 글은 블로그 포스트의 내용입니다.&lt;/p&gt;
 &lt;/article&gt;
+</code></pre>
 
+<pre><code>
 &lt;section&gt;
     &lt;h2&gt;주제 1&lt;/h2&gt;
     &lt;p&gt;이 섹션에서는 주제 1에 대해 설명합니다.&lt;/p&gt;
 &lt;/section&gt;
+</code></pre>
 
+<pre><code>
 &lt;aside&gt;
     &lt;h3&gt;관련 글&lt;/h3&gt;
     &lt;ul&gt;
@@ -77,17 +89,15 @@ HTML4 이전에는 &lt;div&gt;나 &lt;span&gt; 등이 사용. <br>
         &lt;li&gt;&lt;a&gt;href="#">관련 링크 2&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
 &lt;/aside&gt;
+</code></pre>
 
+<pre><code>
 &lt;figure&gt;
     &lt;img src="image.jpg" alt="설명 이미지"&gt;
     &lt;figcaption&gt;이 이미지는 설명을 제공합니다.&lt;/figcaption&gt;
 </figure>
-
-&lt;figure&gt;
-    &lt;img src="image.jpg" alt="설명 이미지"&gt;
-    &lt;figcaption&gt;이 이미지는 설명을 제공합니다.&lt;/figcaption&gt;
-&lt;/figure&gt;
 </code></pre>
+
 
 <style>
     th, td {
