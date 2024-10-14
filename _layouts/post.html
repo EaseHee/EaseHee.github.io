@@ -27,6 +27,7 @@ layout: default
   {% else %}
     <span class="pagination-item older">이전 글</span>
   {% endif %}
+  
   {% if paginator.previous_page %}
     <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">다음 글</a>
   {% else %}

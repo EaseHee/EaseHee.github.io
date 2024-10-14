@@ -1,0 +1,14 @@
+---
+layout: default
+title: Spring
+---
+
+<h1>Spring Posts</h1>
+<ul>
+  {% assign spring_posts = site.posts | where: "category", "Spring" | sort: "date" %}
+    {% for post in spring_posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
