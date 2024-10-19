@@ -2,18 +2,63 @@
 layout: default
 ---
 
+<div class="gtranslate_wrapper">
+  <script>window.gtranslateSettings = {
+              "default_language":"ko",
+              "detect_browser_language":true,
+              "languages":["es","de","th","mn","ar","ko","en","ja","zh-CN"],
+              // "languages":["de","ko","en"],
+              "wrapper_selector":".gtranslate_wrapper",
+              "flag_size":20,
+              "horizontal_position":"right",
+              "vertical_position":"top"
+          }
+    </script>
+  <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+</div>
+
+
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
-  
+
+  <!-- 지랄맞은 페이지네이션 처리 -->
+
   <div class="navigation">
-    {% if page.previous %}
-      <a href="{{ page.previous.url }}">이전 글</a> : {{ page.previous.title }}
+    {% assign previous_post = site.posts | where: "category", page.category | sort: "date" %}
+    {% assign previous_post = nil %} <!-- 이전 글이 없을 경우 else로 처리되도록 -->
+
+    {% for post in site.posts %}
+      {% if post.date < page.date %}
+        {% if post.category == page.category %}
+          {% assign previous_post = post %}
+          {% break %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  
+    {% if previous_post %}
+      <a href="{{ previous_post.url }}">이전 글</a> : {{ previous_post.title }}
+    {% else %}
+      <span>이전 글이 없습니다.</span>
     {% endif %}
+    
     <br>
-    {% if page.next %}
-      <a href="{{ page.next.url }}">다음 글</a> : {{ page.next.title }}
+  {% assign next_posts = site.posts | where: "category", page.category | sort: "date" %}
+  <!-- nil 을 넣으면 가장 마지막 글만 조회된다. -->
+
+  {% for post in next_posts %}
+    {% if post.date > page.date %}
+      {% assign next_post = post %}
+      {% break %}
     {% endif %}
+  {% endfor %}
+
+  {% if next_post %}
+    <a href="{{ next_post.url }}">다음 글</a> : {{ next_post.title }}
+  {% else %}
+    <span>다음 글이 없습니다.</span>
+  {% endif %}
   </div>
 
   {{ content }}
