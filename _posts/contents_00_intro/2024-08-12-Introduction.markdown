@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "소개 글"
-date: 2024-10-02
+date: 2024-08-12
 categories: blog
+category: intro
 ---
 
 <br>

@@ -8,7 +8,7 @@
   margin-bottom: 4em;
 
   li + li {
-    margin-top: .25rem;
+    // margin-top: .25rem;
   }
 }
 
@@ -88,4 +88,14 @@
   height: auto;
   display: inline;
   margin: 0 auto;
+}
+
+.li-archive {
+  line-height: 1; /* 줄 간격 */
+  margin-bottom: 0; /* 아래 여백 제거 */
+}
+
+.summary-title {
+  font-size: 135%;
+  font-weight: bold;
 }

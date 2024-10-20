@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Semantic Tag"
-date: 0000-01-01
+date: 2024-10-10
 categories: blog
+category: HTML, CSS
 ---
 
 <br>
