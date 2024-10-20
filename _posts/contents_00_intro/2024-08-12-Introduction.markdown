@@ -13,7 +13,7 @@ category: intro
 #### (테마 : [DarkPoole](/DarkPoole))
 
 <br>
-[[첫 글 보러가기]](/2024/10/03/Java_00)
+[[ 첫 글 보러가기 ]](/2024/08/31/Java_00)
 <br>
 
 ---

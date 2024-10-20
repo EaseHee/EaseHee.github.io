@@ -26,7 +26,7 @@ title: Archive
 {% assign postsByYearMonth = category.items | sort: "date" | group_by_exp: "post", "post.date | date: '%B %Y'" %}
 
 {% for yearMonth in postsByYearMonth %}
-#### &emsp; &emsp; <i>{{ yearMonth.name }}</i>
+### &emsp; <i>{{ yearMonth.name }}</i>
 {% for post in yearMonth.items %}
 - [{{ post.title }}]({{ post.url }})
 {% endfor %}
