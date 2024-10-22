@@ -18,12 +18,24 @@ layout: default
 </div>
 
 
+<!-- 조회수 확인  -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CZ0D0BC43Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CZ0D0BC43Z');
+</script>
+
+
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
 
+  
   <!-- 지랄맞은 페이지네이션 처리 -->
-
   <div class="navigation">
     {% assign previous_post = site.posts | where: "category", page.category | sort: "date" %}
     {% assign previous_post = nil %} <!-- 이전 글이 없을 경우 else로 처리되도록 -->
@@ -62,8 +74,21 @@ layout: default
   </div>
 
   {{ content }}
-
+  
 </article>
+
+
+<!-- 댓글 기능 [utterance] -->
+<div style="text-align: left;">
+  <script src="https://utteranc.es/client.js"
+          repo="EaseHee/EaseHee.github.io"
+          issue-term="pathname"
+          theme="github-dark"
+          crossorigin="anonymous"
+          async>
+</script>
+</div>
+
 
 
 <div class="pagination">
@@ -79,6 +104,8 @@ layout: default
     <span class="pagination-item newer">다음 글</span>
   {% endif %}
 </div>
+
+
 
 
 {% if site.related_posts != empty %}

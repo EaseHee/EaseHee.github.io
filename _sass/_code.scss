@@ -20,6 +20,11 @@ pre {
   // overflow: auto; // (_layout.scss에서 직접 정의) white-space: nowrap; overflow-x: scroll;
 }
 
+summary {
+  font-size: 120%;
+}
+
+
 .highlight {
   padding: var(--spacer);
   margin-bottom: var(--spacer);
