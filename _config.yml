@@ -1,9 +1,10 @@
 # Setup
 title: Dark Poole
-url: https://getpoole.com
+# url: https://getpoole.com
+url: https://EaseHee.github.io
 paginate: 1
 baseurl: ""
-permalink: pretty
+# permalink: pretty
 
 # Gems
 plugins:

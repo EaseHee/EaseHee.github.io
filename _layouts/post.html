@@ -75,19 +75,19 @@ layout: default
 
   {{ content }}
   
-</article>
+  <!-- 댓글 기능 [utterance] -->
+  <div style="text-align: left;">
+    <script src="https://utteranc.es/client.js"
+            repo="EaseHee/EaseHee.github.io"
+            issue-term="pathname"
+            theme="github-dark"
+            crossorigin="anonymous"
+            async>
+    </script>
+  </div>
 
+</article>  
 
-<!-- 댓글 기능 [utterance] -->
-<div style="text-align: left;">
-  <script src="https://utteranc.es/client.js"
-          repo="EaseHee/EaseHee.github.io"
-          issue-term="pathname"
-          theme="github-dark"
-          crossorigin="anonymous"
-          async>
-</script>
-</div>
 
 
 
@@ -105,7 +105,20 @@ layout: default
   {% endif %}
 </div>
 
-
+<!-- 
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">이전 글</a>
+  {% else %}
+    <span class="pagination-item older">이전 글</span>
+  {% endif %}
+  
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">다음 글</a>
+  {% else %}
+    <span class="pagination-item newer">다음 글</span>
+  {% endif %}
+</div> -->
 
 
 {% if site.related_posts != empty %}
