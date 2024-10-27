@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<!-- 다국어 CDN -->
 <div class="gtranslate_wrapper">
   <script>window.gtranslateSettings = {
               "default_language":"ko",
@@ -19,21 +20,14 @@ layout: default
 
 
 <!-- 조회수 확인  -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CZ0D0BC43Z"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-CZ0D0BC43Z');
-</script>
+<a href="https://hits.seeyoufarm.com">
+  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Feasehee.github.io&count_bg=%23555555&title_bg=%23555555&icon=github.svg&icon_color=%23FFFFFF&title=hits&edge_flat=false"/>
+</a>
 
 
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
-
   
   <!-- 페이지네이션 처리 -->
 
@@ -73,45 +67,8 @@ layout: default
     {% endif %}
   {% endif %}
 </div>
-<!-- 
-  <div class="navigation">
-    {% assign previous_post = site.posts | where: "category", page.category | sort: "date" %}
-    {% assign previous_post = nil %} < !-- 이전 글이 없을 경우 else로 처리되도록 -- >
 
-    {% for post in site.posts %}
-      {% if post.date < page.date %}
-        {% if post.category == page.category %}
-          {% assign previous_post = post %}
-          {% break %}
-        {% endif %}
-      {% endif %}
-    {% endfor %}
-  
-    {% if previous_post %}
-      <a href="{{ previous_post.url }}">이전 글</a> : {{ previous_post.title }}
-    {% else %}
-      <span>이전 글</span>
-    {% endif %}
-    
-    <br>
-  {% assign next_posts = site.posts | where: "category", page.category | sort: "date" %}
-  < !-- nil 을 넣으면 가장 마지막 글만 조회된다. -- >
 
-  {% for post in next_posts %}
-    {% if post.date > page.date %}
-      {% assign next_post = post %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
-
-  {% if next_post %}
-    <a href="{{ next_post.url }}">다음 글</a> : {{ next_post.title }}
-  {% else %}
-    <span>다음 글</span>
-  {% endif %}
-  </div>
- -->
-  
   {{ content }}
   
   <!-- 댓글 기능 [utterance] -->
@@ -127,23 +84,6 @@ layout: default
 
 </article>  
 
-
-
-<!-- 
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">이전 글</a>
-  {% else %}
-    <span class="pagination-item older">이전 글</span>
-  {% endif %}
-  
-  {% if paginator.previous_page %}
-    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: relative_url }}">다음 글</a>
-  {% else %}
-    <span class="pagination-item newer">다음 글</span>
-  {% endif %}
-</div>
- -->
 
 <!-- 
 <div class="pagination">
