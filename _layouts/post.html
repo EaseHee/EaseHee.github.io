@@ -35,10 +35,48 @@ layout: default
   <time datetime="{{ page.date | date_to_xmlschema }}" class="post-date">{{ page.date | date_to_string }}</time>
 
   
-  <!-- 지랄맞은 페이지네이션 처리 -->
+  <!-- 페이지네이션 처리 -->
+
+ <div class="navigation nav-container">
+  {% assign previous_post = site.posts | where: "category", page.category | sort: "date" %}
+  {% assign previous_post = nil %} <!-- 이전 글이 없을 경우 else로 처리되도록 -->
+  {% assign next_posts = site.posts | where: "category", page.category | sort: "date" %}
+  <!-- nil 을 넣으면 가장 마지막 글만 조회된다. -->
+
+  {% for post in site.posts %}
+    {% if post.date < page.date %}
+      {% if post.category == page.category %}
+        {% assign previous_post = post %}
+        {% break %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% for post in next_posts %}
+    {% if post.date > page.date %}
+      {% assign next_post = post %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if previous_post %}
+    {% if next_post %}
+      <a class="nav-prev" href="{{ previous_post.url }}">이전 글<br>{{ previous_post.title }}</a> <a class="nav-next" href="{{ next_post.url }}">다음 글<br>{{ next_post.title }}</a>
+    {% else %}
+      <a class="nav-prev" href="{{ previous_post.url }}">이전 글<br>{{ previous_post.title }}</a> <span class="nav-next">다음 글</span>
+    {% endif %}
+  {% else %}
+    {% if next_post %}
+      <span class="nav-prev" >이전 글</span> <a class="nav-next" href="{{ next_post.url }}">다음 글<br>{{ next_post.title }}</a>
+    {% else %}
+      <span class="nav-prev" >이전 글</span> <span class="nav-next">다음 글</span>
+    {% endif %}
+  {% endif %}
+</div>
+<!-- 
   <div class="navigation">
     {% assign previous_post = site.posts | where: "category", page.category | sort: "date" %}
-    {% assign previous_post = nil %} <!-- 이전 글이 없을 경우 else로 처리되도록 -->
+    {% assign previous_post = nil %} < !-- 이전 글이 없을 경우 else로 처리되도록 -- >
 
     {% for post in site.posts %}
       {% if post.date < page.date %}
@@ -52,12 +90,12 @@ layout: default
     {% if previous_post %}
       <a href="{{ previous_post.url }}">이전 글</a> : {{ previous_post.title }}
     {% else %}
-      <span>이전 글이 없습니다.</span>
+      <span>이전 글</span>
     {% endif %}
     
     <br>
   {% assign next_posts = site.posts | where: "category", page.category | sort: "date" %}
-  <!-- nil 을 넣으면 가장 마지막 글만 조회된다. -->
+  < !-- nil 을 넣으면 가장 마지막 글만 조회된다. -- >
 
   {% for post in next_posts %}
     {% if post.date > page.date %}
@@ -69,10 +107,11 @@ layout: default
   {% if next_post %}
     <a href="{{ next_post.url }}">다음 글</a> : {{ next_post.title }}
   {% else %}
-    <span>다음 글이 없습니다.</span>
+    <span>다음 글</span>
   {% endif %}
   </div>
-
+ -->
+  
   {{ content }}
   
   <!-- 댓글 기능 [utterance] -->
@@ -90,7 +129,7 @@ layout: default
 
 
 
-
+<!-- 
 <div class="pagination">
   {% if paginator.next_page %}
     <a class="pagination-item older" href="{{ paginator.next_page_path | relative_url }}">이전 글</a>
@@ -104,6 +143,7 @@ layout: default
     <span class="pagination-item newer">다음 글</span>
   {% endif %}
 </div>
+ -->
 
 <!-- 
 <div class="pagination">
@@ -120,7 +160,7 @@ layout: default
   {% endif %}
 </div> -->
 
-
+<!-- 
 {% if site.related_posts != empty %}
 <aside class="related">
   <h3>Another postings</h3>
@@ -137,3 +177,49 @@ layout: default
   </ul>
 </aside>
 {% endif %}
+ -->
+
+<hr>
+
+ <div class="navigation nav-container">
+  {% assign previous_post = site.posts | where: "category", page.category | sort: "date" %}
+  {% assign previous_post = nil %} <!-- 이전 글이 없을 경우 else로 처리되도록 -->
+  {% assign next_posts = site.posts | where: "category", page.category | sort: "date" %}
+  <!-- nil 을 넣으면 가장 마지막 글만 조회된다. -->
+
+  {% for post in site.posts %}
+    {% if post.date < page.date %}
+      {% if post.category == page.category %}
+        {% assign previous_post = post %}
+        {% break %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% for post in next_posts %}
+    {% if post.date > page.date %}
+      {% assign next_post = post %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if previous_post %}
+    {% if next_post %}
+      <a class="nav-prev" href="{{ previous_post.url }}">이전 글<br>{{ previous_post.title }}</a> <a class="nav-next" href="{{ next_post.url }}">다음 글<br>{{ next_post.title }}</a>
+    {% else %}
+      <a class="nav-prev" href="{{ previous_post.url }}">이전 글<br>{{ previous_post.title }}</a> <span class="nav-next">다음 글</span>
+    {% endif %}
+  {% else %}
+    {% if next_post %}
+      <span class="nav-prev" >이전 글</span> <a class="nav-next" href="{{ next_post.url }}">다음 글<br>{{ next_post.title }}</a>
+    {% else %}
+      <span class="nav-prev" >이전 글</span> <span class="nav-next">다음 글</span>
+    {% endif %}
+  {% endif %}
+</div>
+<br>
+
+
+
+  
+

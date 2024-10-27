@@ -10,36 +10,43 @@ category: Spring
 
 ---
 # Annotation
-사전적 의미는 주석이라는 뜻이지만, 자바에서는 특정 기능을 수행하는 역할을 담당한다. <br>
+Annotation은 주석이라는 뜻이지만 프로그래밍에서는 컴파일에 포함되지 않는 코드를 <br>
+주석, 혹은 /* Comment */라는 이름으로 부르고 있기 때문에 <br>
+@Annotation은 그냥 어노테이션이라고 부른다. <br>
+또한 자바에서의 어노테이션은 인터페이스와 같이 특수한 기능을 수행한다. <br>
+
 
 어노테이션은 수행 기능에 따라 다음과 같이 구분한다.<br>
 > 
-1> 의존성 주입 <br>
-2> AOP <br>
-3> 웹 Layer <br>
-4> 데이터 Layer <br>
+1> 의존성 주입 (IoC) <br>
+2> 관점 지향 프로그래밍 (AOP) <br>
+3> 웹 계층 (Layer) <br>
+4> 데이터 계층 (Layer) <br>
 5> 트랜젝션 <br>
+<br>
+0> 커스터마이징 <br>
 
 <hr>
 
 ## 1> 의존성 주입
-객체 간의 의존성을 관리하거나 구성 요소를 선언 <br>
-
+객체 간 의존성 관리 및 구성 요소 선언 <br>
 
 <details>
 <summary class="summary-title">@Component</summary>
-<li>org.springframework.stereotype.Component</li>
-<li>의존성 주입을 위한 기본 Annotation</li>
-<li>개발자가 직접 작성한 Class를 Bean으로 등록하기 위한 어노테이션</li>
-<li>@Configuration의 @ComponentScan을 통해 자동으로 검색되어 Bean으로 등록된다.</li>
+<li class="font-lg">org.springframework.stereotype.Component</li>
+<li class="font-lg">의존성 주입을 위한 기본 Annotation</li>
+<li class="font-lg">개발자가 직접 작성한 Class를 Bean으로 등록하기 위한 어노테이션</li>
+<li class="font-lg">@Configuration(ApplicationContext)의 @ComponentScan을 통해 <br>
+&emsp;&emsp;자동으로 검색되어 Bean으로 등록된다.</li>
+
 <details>
 <summary>예시</summary>
 <div markdown="1">
 
 ```java
-@Component
+@Component(value="testComponent")
 public class ComponentClass {
-	
+	// private ComponentClass testComponent = new ComponenClass(); 와 같다.
 }
 ```
 </div>
@@ -48,15 +55,18 @@ public class ComponentClass {
 
 <details>
 <summary class="summary-title">@Service</summary>
-<li>org.springframework.stereotype.Service</li>
-<li>비즈니스 로직을 수행하는 Component</li>
-<li>@Component와 동일하게 동작하지만 비즈니스 로직을 수행하는 클래스임을 명시할 때 작성한다.</li>
+<li class="font-lg">org.springframework.stereotype.Service</li>
+<li class="font-lg">비즈니스 로직을 수행하는 Component</li>
+<li class="font-lg">@Component와 동일하게 동작하지만 비즈니스 로직을 수행하는 클래스임을 명시할 때 작성한다.</li>
 <details>
-<summary>API 내용 확인</summary>
+<summary>예시</summary>
 <div markdown="1">
 
 ```java
-
+@Service // @Component와 동일. 비즈니스 로직을 수행함을 명시
+public class ServiceClass {
+	// private ServiceClass serviceClass = new ServiceClass();	
+}
 ```
 </div>
 </details>
@@ -64,15 +74,23 @@ public class ComponentClass {
 
 <details>
 <summary class="summary-title">@Repository</summary>
-<li>org.springframework.stereotype.Repository</li>
-<li>DAO _ DB와의 상호작용을 담당</li>
-<li>예외 변환 (Exception Translation)</li>
+<li class="font-lg">org.springframework.stereotype.Repository</li>
+<li class="font-lg">DAO _ DB와의 상호작용을 담당</li>
+<li class="font-lg">예외 변환 (Exception Translation)</li>
 <details>
-<summary>API 내용 확인</summary>
+<summary>예시</summary>
 <div markdown="1">
 
 ```java
+@Repository
+public class TestDao {
+	@Autowired
+	private TestRepository repository; // sql문을 구현한 인터페이스 필드 멤버로 선언
 
+	public List<TestDto> select() {
+		return repository.findAll(); // 인터페이스의 반환값을 리턴
+	}
+}
 ```
 </div>
 </details>
@@ -80,16 +98,30 @@ public class ComponentClass {
 
 <details>
 <summary class="summary-title">@Controller</summary>
-<li>org.springframework.stereotype.Controller</li>
-<li>Spring MVC Controller 클래스</li>
-<li>요청 처리 & 응답 반환</li>
-<li>@RequestMapping과 함께 쓰인다.</li>
+<li class="font-lg">org.springframework.stereotype.Controller</li>
+<li class="font-lg">Spring MVC Controller 클래스</li>
+<li class="font-lg">요청 처리 & 응답 반환</li>
+<li class="font-lg">@RequestMapping과 함께 쓰인다.</li>
 <details>
-<summary>API 내용 확인</summary>
+<summary>예시</summary>
 <div markdown="1">
 
 ```java
+@Controller
+public class TestController {
+	@Autowired // DB와 연결할 객체 @Repository를 필드 멤버로 활용
+	private Dao dao;
 
+	@GetMapping("/") // 요청 페이지가 없는 경우 welcome 페이지로 redirect
+	public String index() {
+		return "index"; // welcome page
+	}
+	@PostMapping("search") // 검색어를 전달하며 페이지를 요청할 경우 FormBean에 저장하여 Dao 메서드 호출
+	public String search(Bean bean, org.springframework.ui.Model model) {
+		model.addAttribute("list", dao.search(bean));
+		return "result"; // templates/result.html 로 forward
+	}
+}
 ```
 </div>
 </details>
@@ -101,14 +133,23 @@ public class ComponentClass {
 
 <details>
 <summary class="summary-title">@Bean</summary>
-<li>org.springframework.context.annotation.Bean</li>
-<li>개발자가 직접 제어가 불가능한 외부 라이브러리 등을 Bean으로 만들 때 사용되는 어노테이션</li>
+<li class="font-lg">org.springframework.context.annotation.Bean</li>
+<li class="font-lg">개발자가 직접 제어가 불가능한 외부 라이브러리 등을 Bean으로 만들 때 사용되는 어노테이션</li>
+<li class="font-lg">메서드에 작성</li>
 <details>
-<summary>API 내용 확인</summary>
+<summary>예시</summary>
 <div markdown="1">
 
 ```java
-
+@어노테이션
+public class 클래스 {
+	// ArrayList를 반환하며 Bean으로 등록한다. 
+	// ArrayList<String> testArrayList = new ArrayList<>(); 와 동일
+	@Bean(name="testArrayList") 
+	public ArrayList<String> array() {
+		return new ArrayList<String>();
+	}
+}
 ```
 </div>
 </details>
@@ -116,16 +157,37 @@ public class ComponentClass {
 
 <br>
 
+
 <details>
 <summary class="summary-title">@Autowired</summary>
-<li>org.springframework.beans.factory.annotation.Autowired</li>
-<li></li>
+<li class="font-lg">org.springframework.beans.factory.annotation.Autowired</li>
+<li class="font-lg">Constructor, setter, field에 사용</li>
+<li class="font-lg">타입에 의한 매핑 (객체에 대한 의존성 : Bean 주입)</li>
+
 <details>
-<summary>API 내용 확인</summary>
+<summary class="summary-title">Spring의 Bean 주입 3가지 방법</summary>
+<ol>
+<li class="font-lg">@Autowired</li>
+<li class="font-lg">setter</li>
+<li class="font-lg">@AllArgsConstructor (권장)</li>
+</ol>
+</details>
+
+<details>
+<summary>예시</summary>
 <div markdown="1">
 
 ```java
+@어노테이션
+public class 클래스 {
+	@Aurowired // 구현체를 주입받는다 
+	private TestInterface interface; // 필드 인젝션
 
+	@Autowired
+	private Constructor(TestClass test) { // 생성자 인젝션
+		this test = test;
+	}
+}
 ```
 </div>
 </details>
@@ -134,14 +196,24 @@ public class ComponentClass {
 
 <details>
 <summary class="summary-title">@Qualifier</summary>
-<li>org.springframework.beans.factory.annotation.Qualifier</li>
-<li></li>
+<li class="font-lg">org.springframework.beans.factory.annotation.Qualifier</li>
+<li class="font-lg">Bean으로 등록된 객체의 ID를 통해 주입받는다</li>
+<li class="font-lg">@Autowired와 함께 쓰이며 타입이 아닌 Bean의 Id에 매핑할 때 쓰인다.</li>
+<li class="font-lg">
+	Bean객체의 ID를 찾지 못할 경우 'NoSuchBeanDefinitionException' 발생 <br>
+&emsp;&emsp;자연스럽게 Bean Id에 오타는 없는지 확인한다.
+</li>
 <details>
-<summary>API 내용 확인</summary>
+<summary>예시</summary>
 <div markdown="1">
 
 ```java
-
+@어노테이션
+public class 클래스 {
+	@Aurowired 
+	@Qualifier(value="testImpl") // Bean의 ID와 매핑
+	private TestInterface interface;
+}
 ```
 </div>
 </details>
@@ -150,8 +222,8 @@ public class ComponentClass {
 
 <details>
 <summary class="summary-title">@Value</summary>
-<li>org.springframework.beans.factory.annotation.Value</li>
-<li></li>
+<li class="font-lg">org.springframework.beans.factory.annotation.Value</li>
+<li class="font-lg"></li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -214,8 +286,8 @@ public class ComponentClass {
 
 <details>
 <summary class="summary-title">@Configuration</summary>
-<li></li>
-<li></li>
+<li class="font-lg"></li>
+<li class="font-lg"></li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -230,8 +302,8 @@ public class ComponentClass {
 
 <details>
 <summary class="summary-title">@EnableAspectJAutoProxy</summary>
-<li></li>
-<li></li>
+<li class="font-lg"></li>
+<li class="font-lg"></li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -247,8 +319,8 @@ public class ComponentClass {
 
 <details>
 <summary class="summary-title">@ComponentScan</summary>
-<li>패키지를 설정하여 패키지 내 컴포넌트 스캔</li>
-<li></li>
+<li class="font-lg">패키지를 설정하여 패키지 내 컴포넌트 스캔</li>
+<li class="font-lg"></li>
 <details>
 <summary>View Comments</summary>
 <div markdown="1">
@@ -464,10 +536,10 @@ public @interface ComponentScan {
 		 * following {@link org.springframework.beans.factory.Aware Aware} interfaces, and
 		 * their respective methods will be called prior to {@link TypeFilter#match match}:
 		 * <ul>
-		 * <li>{@link org.springframework.context.EnvironmentAware EnvironmentAware}</li>
-		 * <li>{@link org.springframework.beans.factory.BeanFactoryAware BeanFactoryAware}
-		 * <li>{@link org.springframework.beans.factory.BeanClassLoaderAware BeanClassLoaderAware}
-		 * <li>{@link org.springframework.context.ResourceLoaderAware ResourceLoaderAware}
+		 * <li class="font-lg">{@link org.springframework.context.EnvironmentAware EnvironmentAware}</li>
+		 * <li class="font-lg">{@link org.springframework.beans.factory.BeanFactoryAware BeanFactoryAware}
+		 * <li class="font-lg">{@link org.springframework.beans.factory.BeanClassLoaderAware BeanClassLoaderAware}
+		 * <li class="font-lg">{@link org.springframework.context.ResourceLoaderAware ResourceLoaderAware}
 		 * </ul>
 		 * <p>Specifying zero classes is permitted but will have no effect on component
 		 * scanning.
@@ -537,9 +609,9 @@ public @interface ComponentScan {
 
 <details>
 <summary class="summary-title">@Aspect</summary>
-<li>org.springframework.stereotype.Aspect</li>
-<li>AOP에서 사용하는 관점(Aspect)을 정의하는 클래스</li>
-<li>포인트컷(Pointcut)과 어드바이스(Advice)를 포함</li>
+<li class="font-lg">org.springframework.stereotype.Aspect</li>
+<li class="font-lg">AOP에서 사용하는 관점(Aspect)을 정의하는 클래스</li>
+<li class="font-lg">포인트컷(Pointcut)과 어드바이스(Advice)를 포함</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -554,7 +626,7 @@ public @interface ComponentScan {
 
 <details>
 <summary class="summary-title">@Before</summary>
-<li></li>
+<li class="font-lg"></li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -569,7 +641,7 @@ public @interface ComponentScan {
 
 <details>
 <summary class="summary-title">@After</summary>
-<li></li>
+<li class="font-lg"></li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -584,7 +656,7 @@ public @interface ComponentScan {
 
 <details>
 <summary class="summary-title">@AfterReturning</summary>
-<li></li>
+<li class="font-lg"></li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -599,7 +671,7 @@ public @interface ComponentScan {
 
 <details>
 <summary class="summary-title">@AfterThrowing</summary>
-<li></li>
+<li class="font-lg"></li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -614,8 +686,8 @@ public @interface ComponentScan {
 
 <details>
 <summary class="summary-title">@Around</summary>
-<li>메서드 실행 전후 로직 실행</li>
-<li>메서드 실행을 가로채고 제어</li>
+<li class="font-lg">메서드 실행 전후 로직 실행</li>
+<li class="font-lg">메서드 실행을 가로채고 제어</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -635,9 +707,9 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@RequestMapping</summary>
-<li>org.springframework.web.bind.annotation.RequestMapping</li>
-<li>HTTP 요청을 특정 메서드 또는 클래스에 매핑</li>
-<li>GET, POST 등 요청 처리</li>
+<li class="font-lg">org.springframework.web.bind.annotation.RequestMapping</li>
+<li class="font-lg">HTTP 요청을 특정 메서드 또는 클래스에 매핑</li>
+<li class="font-lg">GET, POST 등 요청 처리</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -656,10 +728,10 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 &emsp;@PostMapping<br>
 &emsp;@PutMapping<br>
 &emsp;@DeleteMapping</b></summary>
-<li>org.springframework.web.bind.annotation.GetMapping</li>
-&emsp; org.springframework.web.bind.annotation.PostMapping <br>
-&emsp; org.springframework.web.bind.annotation.PutMapping <br>
-&emsp; org.springframework.web.bind.annotation.DeleteMapping <br>
+<li class="font-lg">org.springframework.web.bind.annotation.GetMapping</li>
+<span class="font-lg">&emsp; org.springframework.web.bind.annotation.PostMapping</span> <br>
+<span class="font-lg">&emsp; org.springframework.web.bind.annotation.PutMapping</span> <br>
+<span class="font-lg">&emsp; org.springframework.web.bind.annotation.DeleteMapping</span> <br>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -674,8 +746,8 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@RequestParam</summary>
-<li>org.springframework.web.bind.annotation.RequestParam</li>
-<li></li>
+<li class="font-lg">org.springframework.web.bind.annotation.RequestParam</li>
+<li class="font-lg"></li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -690,8 +762,8 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@RequestBody</summary>
-<li>org.springframework.web.bind.annotation.RequestBod</li>
-<li>HTTP 요청 본문을 객체로 변환하여 받을 때 사용</li>
+<li class="font-lg">org.springframework.web.bind.annotation.RequestBod</li>
+<li class="font-lg">HTTP 요청 본문을 객체로 변환하여 받을 때 사용</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -706,8 +778,8 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@ResponseBody</summary>
-<li>org.springframework.web.bind.annotation.ResponseBody</li>
-<li>메서드 반환값을 응답 본문에 직접 넣어 반환</li>
+<li class="font-lg">org.springframework.web.bind.annotation.ResponseBody</li>
+<li class="font-lg">메서드 반환값을 응답 본문에 직접 넣어 반환</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -722,9 +794,9 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@RestController</summary>
-<li>org.springframework.web.bind.annotation.RestController</li>
-<li>@Controller + @ResponseBody</li>
-<li>JSON 또는 XML 형식의 데이터를 반환하는 컨트롤러</li>
+<li class="font-lg">org.springframework.web.bind.annotation.RestController</li>
+<li class="font-lg">@Controller + @ResponseBody</li>
+<li class="font-lg">JSON 또는 XML 형식의 데이터를 반환하는 컨트롤러</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -739,8 +811,8 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@PathVariable</summary>
-<li>org.springframework.web.bind.annotation.PathVariable</li>
-<li>URI 경로의 변수 값을 메서드 매개변수로 전달</li>
+<li class="font-lg">org.springframework.web.bind.annotation.PathVariable</li>
+<li class="font-lg">URI 경로의 변수 값을 메서드 매개변수로 전달</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -761,9 +833,9 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@Entity</summary>
-<li>javax.persistence.Entity</li>
-<li>JPA</li>
-<li>DB 테이블과 매핑</li>
+<li class="font-lg">javax.persistence.Entity</li>
+<li class="font-lg">JPA</li>
+<li class="font-lg">DB 테이블과 매핑</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -778,8 +850,8 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@Table</summary>
-<li>javax.persistence.Table</li>
-<li>엔티티 클래스가 매핑될 데이터베이스의 테이블</li>
+<li class="font-lg">javax.persistence.Table</li>
+<li class="font-lg">엔티티 클래스가 매핑될 데이터베이스의 테이블</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -794,8 +866,8 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@Id</summary>
-<li>javax.persistence.Id</li>
-<li>엔티티의 기본 키(PK)</li>
+<li class="font-lg">javax.persistence.Id</li>
+<li class="font-lg">엔티티의 기본 키(PK)</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -810,8 +882,8 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@GeneratedValue</summary>
-<li>javax.persistence.GeneratedValue</li>
-<li>기본 키 값을 자동으로 생성</li>
+<li class="font-lg">javax.persistence.GeneratedValue</li>
+<li class="font-lg">기본 키 값을 자동으로 생성</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -826,8 +898,8 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@Column</summary>
-<li>javax.persistence.Column</li>
-<li>엔티티 클래스의 필드를 테이블의 컬럼에 매핑</li>
+<li class="font-lg">javax.persistence.Column</li>
+<li class="font-lg">엔티티 클래스의 필드를 테이블의 컬럼에 매핑</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -842,8 +914,8 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary class="summary-title">@JoinColumn</summary>
-<li>javax.persistence.JoinColumn</li>
-<li>테이블 조인 (외래 키 참조)</li>
+<li class="font-lg">javax.persistence.JoinColumn</li>
+<li class="font-lg">테이블 조인 (외래 키 참조)</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -862,10 +934,10 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 &emsp;@ManyToOne<br>
 &emsp;@OneToOne<br>
 &emsp;@ManyToMany</b></summary>
-<li>javax.persistence.OneToMany</li>
-&emsp; javax.persistence.ManyToOne<br>
-&emsp; javax.persistence.OneToOne<br>
-&emsp; javax.persistence.ManyToMany<br>
+<li class="font-lg">javax.persistence.OneToMany</li>
+<span class="font-lg">&emsp; javax.persistence.ManyToOne</span> <br>
+<span class="font-lg">&emsp; javax.persistence.OneToOne</span> <br>
+<span class="font-lg">&emsp; javax.persistence.ManyToMany</span> <br>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -885,9 +957,9 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 
 <details>
 <summary>@Transactional</summary>
-<li>org.springframework.transaction.annotation.Transactional</li>
-<li>트랜젝션 자동 처리</li>
-<li>예외 발생 시 자동 롤백, 정상 실행 시 커밋</li>
+<li class="font-lg">org.springframework.transaction.annotation.Transactional</li>
+<li class="font-lg">트랜젝션 자동 처리</li>
+<li class="font-lg">예외 발생 시 자동 롤백, 정상 실행 시 커밋</li>
 <details>
 <summary>API 내용 확인</summary>
 <div markdown="1">
@@ -898,3 +970,30 @@ Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테�
 </div>
 </details>
 </details>
+
+
+
+
+## 0> Custom
+개발자가 직접 만드는 어노테이션
+
+
+<details>
+<summary>@interface</summary>
+<li class="font-lg">java.lang.annotation.Annotation를 상속</li>
+<li class="font-lg">내부 메서드는 abstract (추상 메서드)</li>
+<details>
+<summary>제약 사항</summary>
+<div markdown="1">
+
+```java
+어노테이션 타입 선언 시 제네릭 불가능
+메서드는 매개변수를 가질 수 없다.
+메서드 선언부에 throws로 예외를 던질 수 없다.
+```
+</div>
+</details>
+</details>
+
+
+

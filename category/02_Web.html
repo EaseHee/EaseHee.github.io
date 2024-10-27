@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Java
+title: Web
 ---
 
-<h1>Java Posts</h1>
+<h1>Web Posts</h1>
 <ul>
-  {% assign categoty_posts = site.posts | where: "category", "Java" | sort: "date" %}
+  {% assign categoty_posts = site.posts | where: "category", "Web" | sort: "date" %}
     {% for post in categoty_posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>

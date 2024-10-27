@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "sendRedirect 와 forward"
+title: "redirect 와 forward"
 date: 2024-10-10
 categories: blog
 category: Web
@@ -10,7 +10,7 @@ category: Web
 
 ---
 ### **클라이언트측 이동 방식** vs **서버측 이동 방식** <br>
-두 이동 방식은 크게 프로젝트 내 ***WEB-INF 폴더 접근 여부***와 <br>
+두 이동 방식은 크게 프로젝트 내 ***WEB-INF(templates) 폴더 접근 여부***와 <br>
 웹 페이지 주소창의 ***주소 노출 여부***에서 차이가 있다. <br>
 <br>
 **클라이언트측 이동**은 주소창에 페이지의 주소가 노출된다. <br>
@@ -29,7 +29,7 @@ Servlet 객체를 활용하여 페이지를 이동시키는 경우에 forward �
         </tr>
         <tr>
             <th></th>
-            <th>sendRedirect</th>
+            <th>redirect</th>
             <th>forward</th>
         </tr>
     </thead>
@@ -40,7 +40,7 @@ Servlet 객체를 활용하여 페이지를 이동시키는 경우에 forward �
             <td>서버측 이동</td>
         </tr>
         <tr>
-            <td>WEB-INF 폴더 접근 여부</td>
+            <td>WEB-INF 폴더 접근 여부<br>templates</td>
             <td>X</td>
             <td>O</td>
         </tr>
@@ -66,3 +66,6 @@ Servlet 객체를 활용하여 페이지를 이동시키는 경우에 forward �
         </tr>
     </thead>
 </table>
+
+Controller에 요청을 하는 경우 
+요청명

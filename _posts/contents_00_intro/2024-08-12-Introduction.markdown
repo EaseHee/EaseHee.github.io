@@ -16,6 +16,7 @@ category: intro
 [[ 첫 글 보러가기 ]](/2024/08/31/Java_00)
 <br>
 
+
 ---
     
 ### 생각 정리를 위한 공간
@@ -24,8 +25,9 @@ category: intro
 - HTML
 - CSS
 - JavaScript (ECMA6)
-- MariaDB (MYSQL) : RDBMS
+- MariaDB (MySQL) : RDBMS
 - Java
+- Spring 
 <br>
 
 > [팀 프로젝트](https://github.com/EaseHee/TeamProject.git)

@@ -23,3 +23,30 @@ footer {
   margin-top: var(--spacer-3);
   margin-bottom: var(--spacer-3);
 }
+
+.nav-prev, .nav-next {
+  display: block;
+  border: 0.5px solid currentColor;
+  border-radius: 5px;
+  width: 50%;
+  height: 70px;
+  font-size: 1.3rem;
+  text-align: center;
+  justify-self: center;
+}
+.nav-container {
+  display: flex;
+  flex-flow: nowrap row;
+  // 하위 a 태그의 밑줄 삭제
+  a {
+    text-decoration-line: none;
+  }
+}
+
+details{
+  padding: 0.5%;
+}
+details details {
+  border: solid 0.1px gray;
+  border-radius: 10px;
+}
