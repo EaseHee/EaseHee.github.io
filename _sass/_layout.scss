@@ -48,9 +48,20 @@ details{
   // margin-top: 0.5%;
   padding: 0.5%;
 }
-details details {
+details /* details */ {
   border: solid 0.1px gray;
   border-radius: 10px;
   margin-top: 1%;
   padding: 1.5%;
+}
+
+.rec {
+  width: fit-content;
+  border: solid 0.1px currentColor;
+  margin-top: 1%;
+  padding: 1.5%;
+}
+
+.bg-bk {
+  background-color: black;
 }
