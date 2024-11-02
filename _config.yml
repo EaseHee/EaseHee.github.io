@@ -47,6 +47,9 @@ nav:
 
   - title: About
     url: /about
+  
+  - title: Search
+    url: /search
 
 collections:
   posts:
@@ -56,3 +59,13 @@ collections:
 
 
 google_analytics: G-CZ0D0BC43Z
+
+# Search Bar Option
+tipue_search:
+     include:
+         pages: false
+         collections: []
+     exclude:
+         files: [search.html, index.html, tags.html]
+         categories: []
+         tags: []

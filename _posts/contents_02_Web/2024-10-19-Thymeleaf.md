@@ -487,40 +487,115 @@ Thymeleaf 내 코드의 재사용성을 높이기 위해서 <br>
 
 
 
+## #Utility 
 
-- thymeleaf-layout-dialect의 등장 배경
+#message : 메시지, 국제화 처리 <br>
+#uris : URI 이스케이프 지원 <br>
+#dates : java.util.Date 서식 지원 <br>
+#calendars : java.util.Calendar 서식 지원 <br>
+#temporals : 자바8 날짜 서식 지원 (날짜는 주로 temporals를 많이 사용) <br>
+#numbers : 숫자 서식 지원 <br>
+#strings : 문자 관련 편의 기능 <br>
+#objects : 객체 관련 기능 <br>
+#bools : boolean 관련 기능 <br>
+#arrays : 배열 관련 기능 <br>
+#lists : 컬렉션 관련 기능 <br>
+#sets : 컬렉션 관련 기능 <br>
+#maps : 컬렉션 관련 기능 <br>
+#ids : 아이디 처리 관련 기능 <br>
+
+출처: [Steady and right:티스토리](https://maenco.tistory.com/entry/Thymeleaf-Utilities-유틸리티)
+
+
+#numbers.formatInteger()
+
+#numbers.sequence()
+
+#temporals.format()
+
+#dates.format()
+
+#strings.substring()
+
+#strings.length()
+
+
+```html
+<!-- 타임리프 유틸리티 객체와 대표 함수 예시 -->
+
+<!-- 1. #message: 국제화 메시지 처리 -->
+<p th:text="#{greeting.message}">Hello, world!</p>
+
+<!-- 2. #uris: URI 조작 및 매개변수 추가 -->
+<a th:href="@{${#uris.param('/search', 'query', 'thymeleaf')}}">Search</a>
+
+<!-- 3. #dates 및 #temporals: 날짜 포맷팅 및 조작 -->
+<p th:text="${#dates.format(today, 'yyyy-MM-dd')}"></p> <!-- #dates -->
+<p th:text="${#temporals.format(today, 'yyyy/MM/dd')}"></p> <!-- #temporals -->
+
+<!-- 4. #numbers: 숫자 포맷팅 -->
+<p th:text="${#numbers.formatDecimal(price, 0, 'COMMA')}"></p>
+
+<!-- 5. #strings: 문자열 조작 -->
+<p th:if="${#strings.contains(name, 'thyme')}">Name contains 'thyme'</p>
+
+<!-- 6. #objects: 객체 조작 -->
+<p th:text="${#objects.nullSafe(user.name)}"></p>
+
+<!-- 7. #bools: 불리언 값 조작 -->
+<p th:if="${#bools.isTrue(isAvailable)}">Available</p>
+
+<!-- 8. #arrays, #lists, #sets, #maps: 컬렉션 조작 -->
+<ul th:each="item : ${#arrays.toList(items)}">
+    <li th:text="${item}"></li>
+</ul>
+
+<!-- 9. #ids: 고유 ID 생성 -->
+<div id="${#ids.next('prefix')}"></div>
+```
+
+
+<br>
+<hr>
+
+## Thymeleaf Layout Dialect
 
 Thymeleaf는 서버 사이드 Java 템플릿 엔진으로,  <br>
 JSP에 비해 HTML 친화적이지만,  <br>
 템플릿에서 공통 레이아웃을 쉽게 재사용할 수 있는 방법이 부족했다.  <br>
+
 기존 JSP와 달리 Thymeleaf는 HTML 구조를 최대한 유지하는 방향으로 설계되었고,  <br>
 JavaScript 없이도 정적인 HTML 파일로 작동할 수 있도록 고안되었다.  <br>
+
 그러다 보니 복잡한 웹 애플리케이션에서는 페이지마다  <br>
 동일한 레이아웃을 중복 작성하거나 프레임워크 없이  <br>
 수작업으로 레이아웃을 설정해야 하는 단점이 있었다.  <br>
-이를 해결하고자 Thymeleaf 생태계에 thymeleaf-layout-dialect가 등장하게 되었다. <br>
+
+이를 해결하고자 Thymeleaf에 **thymeleaf-layout-dialect**가 등장하게 되었다. <br>
 
 <br>
 
-- 사용법
-thymeleaf-layout-dialect는  <br>
+
+### thymeleaf-layout-dialect 사용법
+
 &lt;head&gt;, &lt;header&gt;, &lt;footer&gt;와 같은  <br>
-공통 영역을 분리하여 하나의 템플릿 파일에서 관리할 수 있다.  <br>
+공통 영역을 분리하여 하나의 템플릿 파일에서 관리<br>
 
-layout:decorate는 layout:fragment를 사용할 필요 없이 템플릿을 지정하는 속성 <br>
+**layout:decorate** <br>
+**layout:fragment를 사용할 필요 없이 템플릿을 지정** <br>
+**현재 HTML 템플릿이 다른 템플릿을 부모 레이아웃으로 사용**할 때 <br>
+> ***자식 템플릿에서만 사용***
 
-layout:decorate는 현재 HTML 템플릿이 다른 템플릿을 부모 레이아웃으로 사용할 때 지정.  <br>
-이 속성은 자식 템플릿에서만 사용,  <br>
-부모 템플릿의 layout:fragment로 지정된 부분에 자식 템플릿의 내용이 삽입. <br>
+**부모 템플릿의 layout:fragment로 지정된 부분에 자식 템플릿의 내용이 삽입**. <br>
 
 
-
+<pre class="rec bg-bk">
 - 주요 체크리스트 <br>
 1.	자식 템플릿에 layout:decorate를 지정하고, layout:fragment는 설정하지 않음. <br>
 2.	부모 템플릿에 layout:fragment로 삽입될 위치 지정. <br>
-3.	프래그먼트 파일에서 불필요한 <html>, <head>, <body> 태그를 제거. <br>
+3.	프래그먼트 파일에서 불필요한 &lt;html&gt;, &lt;head&gt;, &lt;body&gt; 태그를 제거. <br>
 4.	파일 경로 및 th:replace 참조가 정확한지 확인. <br>
-
+</pre>
 
 
 <br>

@@ -24,10 +24,10 @@ category: intro
 > [프로그래밍 공부](https://github.com/EaseHee/)
 - HTML
 - CSS
-- JavaScript (ECMA6)
-- MariaDB (MySQL) : RDBMS
+- JavaScript (ES6)
+- MariaDB (MySQL)
 - Java
-- Spring 
+- SpringBoot
 <br>
 
 > [팀 프로젝트](https://github.com/EaseHee/TeamProject.git)

@@ -1668,7 +1668,7 @@ html 파일 내 타임리프 문법을 사용하여 데이터 반환 및 출력.
 </details>
 
 타임리프의 예약어에 대해서는 <br>
-[Spring_07_Thymeleaf](/2024/10/19/Thymeleaf)에서... <br>
+[Thymeleaf와 템플릿 엔진](/2024/10/19/Thymeleaf)에서... <br>
 
 
 ---
