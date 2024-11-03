@@ -1,4 +1,4 @@
-## EaseHee.github.io _ [in English](/README_EN.md)
+## EaseHee.github.io
 #### (테마 : [DarkPoole](/DarkPoole.md))
 <br>
 

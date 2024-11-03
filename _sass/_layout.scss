@@ -76,3 +76,9 @@ details /* details */ {
   margin: 2%;
   box-sizing: border-box;
 }
+
+.dual {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 600px;
+}
