@@ -634,10 +634,13 @@ dependencies {
 <details>
 <summary>방법 2> 프롬프트 포트 번호 삭제</summary>
     <pre>
-    1. 포트 번호 확인 _ lsof -i:포트번호
-    2. 포트 번호 삭제 _ kill -9 PID 
-    .. 한번에 하려면 아래 (현재 port=80)
-    %> kill -9 ${lsof -t -i:80}
+    1. 포트 번호 확인 
+        %> lsof -i:포트번호
+    2. 포트 번호 삭제 
+        %> kill -9 PID 
+
+    *. 한번에 하려면 아래 (현재 port=80)
+        %> kill -9 ${lsof -t -i:80}
     </pre>
 </details>
 </details>

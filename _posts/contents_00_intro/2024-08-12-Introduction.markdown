@@ -42,11 +42,12 @@ category: intro
 <br><br><br><br>
 <br><br><br><br>
 
-**도전에 앞서 할 수 있냐고 묻는 나에게**
-<br><br>
-
-***할 수 있는 것, 하고 싶은 것만 한다면***<br>
-&emsp;&emsp;***내일도 어제와 다를 수 없다.***<br>
-***나는 바뀌기 위해 이 자리에 섰고***<br>
-&emsp;&emsp;***절대 도망가지 않는다.***<br><br>
-**나는 나를 믿는다.<br> &emsp;&emsp;할 수 있다고 믿으면 할 수 있다.**
+<details style="border: 0">
+<summary style="list-style: none;">도전에 앞서 할 수 있냐고 묻는 나에게</summary>
+<br>
+할 수 있는 것, 하고 싶은 것만 한다면<br>
+&emsp;&emsp;내일도 어제와 다를 수 없다.<br>
+나는 바뀌기 위해 이 자리에 섰고<br>
+&emsp;&emsp;절대 도망가지 않는다.<br><br>
+나는 나를 믿는다.<br> &emsp;&emsp;할 수 있다고 믿으면 할 수 있다.
+</details>

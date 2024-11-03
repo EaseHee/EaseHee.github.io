@@ -1,0 +1,14 @@
+---
+layout: default
+title: Diagram
+---
+
+<h1>Diagram Posts</h1>
+<ul>
+  {% assign categoty_posts = site.posts | where: "category", "Diagram" | sort: "date" %}
+    {% for post in categoty_posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+</ul>

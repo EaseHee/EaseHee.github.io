@@ -27,7 +27,7 @@ category: Diagram
         - 특수 연관<span> : 집합 관계</span> '생성자 호출 시'
             <span>-> LifeCyle에 따른 구분</span> '인스턴스 생성, 소멸 시점의 차이'
             - 집합 연관 (Aggregation)<span> : 생성된 인스턴스를 주입받는 경우</span>
-            - 복합 연관 (Composition)<span> : 생성자를 직접 호출하는 경우</span>
+            - 합성 연관 (Composition)<span> : 생성자를 직접 호출하는 경우</span>
     - 의존 관계 (dependency)<span> : 참조 관계 소멸</span> '지역변수'
 </pre>    
 <pre>       <span>(의존 관계 세부 구분 시) 
@@ -132,7 +132,7 @@ public class A {
         </tr>
         <tr>
             <td>
-                복합 연관 관계<br>
+                합성 연관 관계<br>
                 (Composition)
             </td>
             <td>
