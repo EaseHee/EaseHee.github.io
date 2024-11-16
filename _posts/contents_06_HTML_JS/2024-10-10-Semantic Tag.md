@@ -3,7 +3,7 @@ layout: post
 title: "Semantic Tag"
 date: 2024-10-10
 categories: blog
-category: HTML, CSS
+category: HTML
 ---
 
 <br>
