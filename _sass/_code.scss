@@ -27,7 +27,7 @@ summary {
 
 
 .highlight {
-  padding: var(--spacer);
+  padding: var(--spacer-0); // --spacer-0: calc(var(--spacer) * 0.7); /* 1117 EaseHee (_variables.scss) */
   margin-bottom: var(--spacer);
   background-color: var(--code-bg);
   border-radius: var(--border-radius);

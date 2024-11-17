@@ -30,6 +30,8 @@ sass:
 
 # Replace this value and uncomment to enable Google Analytics tracking
 # ga_analytics: UA-000000-0
+ga_analytics: G-CZ0D0BC43Z
+
 
 # Specify the author for blog posts
 author:
@@ -57,8 +59,6 @@ collections:
     permalink: /:year/:month/:day/:title/
     order: ascending # 추가: 게시글 정렬을 오름차순으로 설정
 
-
-google_analytics: G-CZ0D0BC43Z
 
 # Search Bar Option
 tipue_search:

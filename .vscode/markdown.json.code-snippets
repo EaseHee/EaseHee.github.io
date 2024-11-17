@@ -34,5 +34,14 @@
 			"</details>",
 		],
 		"description": "Create Title Toggle Element"
-	}
+	}, 
+	"Highlighted Pre Code Element": {
+		"prefix": "hpc",
+		"body": [
+			"<pre class='highlight'><code>",
+			"$1",
+			"</code></pre>",
+		],
+		"description": "Create Code Element"
+	}, 
 }

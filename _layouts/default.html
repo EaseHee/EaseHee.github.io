@@ -34,6 +34,17 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 
+    <!-- 상단으로 이동하기 버튼 -->
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>
+      addBackToTop({
+        diameter: 56,
+        backgroundColor: 'var(--gray-600)',
+        textColor: '#fff',
+      })
+    </script>
+
+
     {% if site.ga_analytics %}
     <script>
 
