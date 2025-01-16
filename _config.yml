@@ -17,11 +17,11 @@ minimal_mistakes_skin    : "neon" # "air", "aqua", "contrast", "dark", "dirt", "
 # Site Settings
 locale                   : "ko-KR"
 rtl                      : # true, false (default) # turns direction of the page into right to left for RTL languages
-title                    : "유기력"
+title                    : "EaseHee"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "ThisIsHee"
-description              : "유기력"
+name                     : # "ThisIsHee"
+description              : # "유기력"
 url                      : "https://EaseHee.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -114,9 +114,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "EaseHee"
+  name             : "이건희"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "이건희 (GeonHee Lee)"
+  bio              : "GeonHee Lee"
   location         : "Seoul, Korea"
   email            : "geonhee@naver.com"
   links:

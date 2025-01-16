@@ -3,33 +3,44 @@
    ========================================================================== */
 
 .masthead {
-  position: relative;
-  border-bottom: 1px solid $border-color;
-  -webkit-animation: $intro-transition;
-  animation: $intro-transition;
-  -webkit-animation-delay: 0.15s;
-  animation-delay: 0.15s;
-  z-index: 20;
+  // position: relative;
+  // border-bottom: 1px solid $border-color;
+  // -webkit-animation: $intro-transition;
+  // animation: $intro-transition;
+  // -webkit-animation-delay: 0.15s;
+  // animation-delay: 0.15s;
+  // z-index: 20;
+  position: fixed; /* 상단 고정 */
+  top: 0; /* 화면의 맨 위 */
+  left: 0;
+  width: 100%; /* 화면 너비에 맞추기 */
+  z-index: 1000; /* 다른 요소 위에 배치 */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  padding: 10px 0; /* 상하 여백 조정 */
 
   &__inner-wrap {
     @include clearfix;
-    margin-inline: auto;
-    padding: 1em;
-    max-width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    font-family: $sans-serif-narrow;
-
+    // margin-inline: auto;
+    // padding: 1em;
+    // max-width: 100%;
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // display: flex;
+    // -webkit-box-pack: justify;
+    // -ms-flex-pack: justify;
+    // justify-content: space-between;
+    // font-family: $sans-serif-narrow;
+    max-width: 1200px; /* 중앙 정렬을 위한 최대 너비 */
+    margin: 0 auto; /* 가로로 중앙 정렬 */
+    padding: 0 15px; /* 좌우 여백 */
+    
     @include breakpoint($x-large) {
       max-width: $max-width;
     }
 
     nav {
       z-index: 10;
+      background-color: rgba(0, 0, 0, 0); /* 배경 투명도 100% */
     }
 
     a {

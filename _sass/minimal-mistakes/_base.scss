@@ -10,6 +10,8 @@ html {
 
 body {
   margin: 0;
+  margin-top: 60px; /* 헤더 높이에 따라 본문과 겹치지 않게 여백 추가 */
+
   padding: 0;
   color: $text-color;
   font-family: $global-font-family;
