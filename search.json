@@ -1,0 +1,13 @@
+---
+layout: none
+---
+
+[
+  {% for post in site.posts %}
+  {
+    "title": "{{ post.title | escape }}",
+    "url": "{{ post.url | absolute_url }}",
+    "content": "{{ post.content | strip_html | strip_newlines | escape }}"
+  }{% if forloop.last == false %},{% endif %}
+  {% endfor %}
+]

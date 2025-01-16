@@ -1,9 +1,12 @@
 ---
-layout: post
+layout: single
 title: "SpringBoot_NoResourceFoundException"
 date: 2024-10-24
-categories: blog
-category: Error
+categories:
+  - Error
+tags:
+  - SpringBoot
+  - NoResourceFoundException
 ---
 
 <br>

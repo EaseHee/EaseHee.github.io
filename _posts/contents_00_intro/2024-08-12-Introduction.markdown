@@ -1,48 +1,53 @@
 ---
-layout: post
+layout: single
 title: "소개 글"
 date: 2024-08-12
-categories: blog
-category: intro
+categories:
+  - intro
+tags:
+  - intro
+permalink: /intro/
 ---
 
 <br>
 
 ### 이건희의 깃허브 페이지를 찾아주셔서 감사합니다.
 ## EaseHee.github.io
-#### (테마 : [DarkPoole](/DarkPoole))
 
 <br>
-[[ 첫 글 보러가기 ]](/2024/08/31/Java_00)
+[[ 첫 글 보러가기 ]](/java/Java_00_Intro)
 <br>
 
 
 ---
-    
+
 ### 생각 정리를 위한 공간
 
-> [프로그래밍 공부](https://github.com/EaseHee/)
-- HTML
-- CSS
-- JavaScript (ES6)
-- MariaDB (MySQL)
-- Java
-- SpringBoot
+### 📚 프로그래밍 공부
+
+- **HTML**
+- **CSS**
+- **JavaScript (ES6)**
+- **React**
+- **MariaDB (MySQL)**
+- **Java**
+- **Spring Boot**
+
+➡️ [GitHub 프로그래밍 공부 저장소](https://github.com/EaseHee/)
+
 <br>
 
-> [팀 프로젝트](https://github.com/EaseHee/TeamProject.git)
-* 프로젝트 주제 : 소상공인을 위한 ERP 시스템
+### 🛠️ 팀 프로젝트
+
+* 프로젝트 1 : [소상공인을 위한 ERP 시스템](https://github.com/EaseHee/TeamProject.git)
+* 프로젝트 2 : [사용자 맞춤형 음식점 추천 웹 서비스](https://github.com/EaseHee/AcornSpring2.git)
+
 <br><br>
 
 ---
 
 
-<br><br><br><br>
-<br><br><br><br>
-<br><br><br><br>
-<br><br><br><br>
-
-<details style="border: 0">
+<details style="border: 0; text-align: end">
 <summary style="list-style: none;">도전에 앞서 할 수 있냐고 묻는 나에게</summary>
 <br>
 할 수 있는 것, 하고 싶은 것만 한다면<br>

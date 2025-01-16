@@ -1,9 +1,13 @@
 ---
-layout: post
+layout: single
 title: "Java_14_Adaptor와 default 메서드"
 date: 2024-09-14
-categories: blog
-category: Java
+categories:
+  - Java
+tags:
+  - Java
+  - Adaptor
+  - default method
 ---
 
 <br>

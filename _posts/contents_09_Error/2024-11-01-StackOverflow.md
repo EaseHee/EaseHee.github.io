@@ -1,9 +1,12 @@
 ---
-layout: post
+layout: single
 title: "SpringBoot_Stack Overflow (순환 참조)"
 date: 2024-11-01
-categories: blog
-category: Error
+categories:
+  - Error
+tags:
+  - SpringBoot
+  - Stack Overflow
 ---
 
 <br>

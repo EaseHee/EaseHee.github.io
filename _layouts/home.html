@@ -1,0 +1,45 @@
+---
+layout: archive
+---
+
+
+<!-- {{ content }} -->
+
+<!-- <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3> -->
+
+<h3>게시글 모음</h3>
+<ul>
+  {% for category_name in site.category_order %}
+    {% assign category_posts = site.categories[category_name] %}
+    {% if category_posts %}
+      <li>
+        <a href="/categories/{{ category_name | slugify }}/">{{ category_name }}</a> ({{ category_posts.size }})
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<br/><hr/><br/>
+
+<div class="intro">
+  {% assign intro_post = site.categories.intro | first %}
+  {% if intro_post %}
+    <h1>{{ intro_post.title }}</h1>
+    <p>{{ intro_post.content | markdownify }}</p>
+  {% else %}
+    <p>소개 글이 없습니다.</p>
+  {% endif %}
+</div>
+
+<!-- {% if paginator %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
+{% endif %}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html entries=posts type=entries_layout %}
+</div>
+
+{% include paginator.html %} -->

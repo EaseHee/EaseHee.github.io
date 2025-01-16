@@ -1,0 +1,34 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+search: false
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+.toc {
+    margin: 20px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+  
+.toc ul {
+    font-size: 0.8em;
+    list-style: none;
+}
+  
+.toc li {
+    margin: 5px 0;
+}
+  
+.toc a {
+    display: inline; /* 링크는 인라인으로 표시 */
+    text-decoration: none;
+}
+  
+.toc a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,50 @@
+{% capture jekyll_toc %}
+  {% assign nodes = include.html | strip | split: '<h' %}
+  {% assign firstHeader = true %}
+  {% assign lastLevel = 0 %}
+  {% assign tocContent = "" %}
+
+  {% for node in nodes %}
+    {% if node == "" %}
+      {% continue %}
+    {% endif %}
+
+    {% assign currLevel = node | slice: 0, 1 | times: 1 %}
+    {% assign header = node | split: '</h' | first | split: '>' | last %}
+    {% assign htmlID = node | split: 'id="' | last | split: '"' | first %}
+
+    <!-- h1과 h2만 포함 -->
+    {% if currLevel < 1 or currLevel > 2 %}
+      {% continue %}
+    {% endif %}
+
+
+    {% if firstHeader %}
+      {% assign firstHeader = false %}
+      {% assign lastLevel = currLevel %}
+    {% endif %}
+
+    {% if currLevel > lastLevel %}
+      {% assign tocContent = tocContent | append: "<ul>" %}
+    {% elsif currLevel < lastLevel %}
+      {% assign levelDiff = lastLevel | minus: currLevel %}
+      {% for i in (1..levelDiff) %}
+        {% assign tocContent = tocContent | append: "</li></ul>" %}
+      {% endfor %}
+    {% else %}
+      {% assign tocContent = tocContent | append: "</li>" %}
+    {% endif %}
+
+    {% assign tocContent = tocContent | append: "<li><a href='#" | append: htmlID | append: "'>" | append: header | append: "</a></li>" %}
+    {% assign lastLevel = currLevel %}
+  {% endfor %}
+
+  {% for i in (1..lastLevel) %}
+    {% assign tocContent = tocContent | append: "</ul>" %}
+  {% endfor %}
+{% endcapture %}
+
+
+  <ul>
+    {{ tocContent | safe }}
+  </ul>

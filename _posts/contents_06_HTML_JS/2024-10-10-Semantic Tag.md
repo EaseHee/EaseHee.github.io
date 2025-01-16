@@ -1,9 +1,12 @@
 ---
-layout: post
+layout: single
 title: "Semantic Tag"
 date: 2024-10-10
-categories: blog
-category: HTML
+categories:
+  - HTML
+tags:
+  - html5
+  - Semantic Tag
 ---
 
 <br>

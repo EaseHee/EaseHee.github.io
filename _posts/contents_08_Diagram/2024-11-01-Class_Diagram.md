@@ -1,9 +1,11 @@
 ---
-layout: post
+layout: single
 title: "UML_ClassDiagram"
 date: 2024-11-01
-categories: blog
-category: Diagram
+categories:
+  - Diagram
+tags:
+  - UML
 ---
 
 <br>
@@ -11,7 +13,7 @@ category: Diagram
 ---
 <br>
 
-## 클래스 다이어그램 <br>
+## 클래스 다이어그램 
 클래스간 관계를 이해하기 쉽도록 그림(다이어그램)으로 표현한 것.
 
 <br>

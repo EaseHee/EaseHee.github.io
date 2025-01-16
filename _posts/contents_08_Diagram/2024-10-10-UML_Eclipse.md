@@ -1,21 +1,26 @@
 ---
-layout: post
+layout: single
 title: "UML_Eclipse 설치 [Mac]"
 date: 2024-10-10
-categories: blog
-category: Diagram
+categories:
+  - Diagram
+tags:
+  - UML
+  - Eclipse
+  - Mac
 ---
 
 <br>
 
 ---
+
 <br>
 
-UML : Unified Modeling Language <br>
+## UML : Unified Modeling Language
 시스템이나 프로세스를 이해하기 쉽도록 다이어그램으로 표현한 것.
 
 
-## [Amateras UML](https://ko.osdn.net/projects/amateras/releases)
+[Amateras UML](https://ko.osdn.net/projects/amateras/releases) <br>
 이클립스에 설치하기 (Eclipse) <br>
 
 <br>
