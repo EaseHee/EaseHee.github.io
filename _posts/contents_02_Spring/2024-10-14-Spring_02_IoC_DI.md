@@ -29,11 +29,6 @@ tags:
 <table>
     <thead>
         <tr>
-            <th></th><th></th>
-        </tr>
-    </thead>
-    <thead>
-        <tr>
             <th colspan="2">제어의 역전에 따른 장단점</th>
             <!-- <th></th> -->
         </tr>
@@ -64,11 +59,6 @@ tags:
             <td>생성된 객체에 대한 이해 부족 우려 </td>
         </tr>
     </tbody>
-    <thead>
-        <tr>
-            <th></th><th></th>
-        </tr>
-    </thead>
 </table>
 
 <br>

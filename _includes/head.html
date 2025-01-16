@@ -29,3 +29,20 @@
     <script src="{{ script | relative_url }}"></script>
   {% endfor %}
 {% endif %}
+
+  <!-- 다국어 CDN -->
+  <div class="gtranslate_wrapper">
+    <script>
+        window.gtranslateSettings = {
+            "default_language":"ko",
+            "detect_browser_language":true,
+            "languages":["es","de","th","mn","ar","ko","en","ja","zh-CN"],
+            // "languages":["de","ko","en"],
+            "wrapper_selector":".gtranslate_wrapper",
+            "flag_size":20,
+            "horizontal_position":"right",
+            "vertical_position":"bottom",
+        }
+    </script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/flags.js" defer></script>
+  </div>

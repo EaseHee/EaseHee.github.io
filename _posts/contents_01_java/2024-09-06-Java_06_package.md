@@ -41,11 +41,6 @@ tags:
 <table  style="width: fit-content">
     <thead>
         <tr>
-            <th></th><th></th><th></th><th></th>
-        </tr>
-    </thead>
-    <thead>
-        <tr>
             <th>접근 제한자</th>
             <th>제한 범위</th>
             <th>동일 패키지 접근 여부 <br>(상속받지 않은 경우)</th>
@@ -78,11 +73,6 @@ tags:
             <td>X</td>
         </tr>
     </tbody>
-    <thead>
-        <tr>
-            <th></th><th></th><th></th><th></th>
-        </tr>
-    </thead>
 </table>
 <br>
 ***접근 제한자를 명시적으로 작성하지 않을 경우 default로 설정된다.*** <br>

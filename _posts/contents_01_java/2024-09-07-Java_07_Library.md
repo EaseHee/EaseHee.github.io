@@ -75,11 +75,6 @@ framework는 클래스와 라이브러리의 집합체와 같다. <br>
 <table>
     <thead>
         <tr>
-            <th></th><th></th>
-        </tr>
-    </thead>
-    <thead>
-        <tr>
             <th colspan="2">framewok 사용에 따른 장단점</th>
             <!-- <th></th> -->
         </tr>
@@ -110,22 +105,12 @@ framework는 클래스와 라이브러리의 집합체와 같다. <br>
             <td>개발자의 능력 저하</td>
         </tr>
     </tbody>
-    <thead>
-        <tr>
-            <th></th><th></th>
-        </tr>
-    </thead>
 </table>
 
 <br>
 프레임워크에는 여러 종류가 있지만 대표적으로는 아래와 같이 구분할 수 있다.
 
 <table>
-    <thead>
-        <tr>
-            <th></th><th></th>
-        </tr>
-    </thead>
     <thead>
         <tr>
             <th>구분</th>
@@ -150,11 +135,6 @@ framework는 클래스와 라이브러리의 집합체와 같다. <br>
             <td>Bootstrap, Foundation, MDL, ...</td>
         </tr>
     </tbody>
-    <thead>
-        <tr>
-            <th></th><th></th>
-        </tr>
-    </thead>
 </table>
 
 <br>
@@ -183,11 +163,6 @@ framework를 사용함으로써 제어권이 개발자에게서 framework로 넘
 
 
 <table>
-    <thead>
-        <tr>
-            <th></th><th></th>
-        </tr>
-    </thead>
     <thead>
         <tr>
             <th colspan="2">제어의 역전에 따른 장단점</th>
@@ -220,11 +195,6 @@ framework를 사용함으로써 제어권이 개발자에게서 framework로 넘
             <td>생성된 객체에 대한 이해 부족 우려 </td>
         </tr>
     </tbody>
-    <thead>
-        <tr>
-            <th></th><th></th>
-        </tr>
-    </thead>
 </table>
 
 

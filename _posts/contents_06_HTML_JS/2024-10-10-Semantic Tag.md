@@ -115,9 +115,6 @@ HTML4 이전에는 &lt;div&gt;나 &lt;span&gt; 등이 사용. <br>
 <table>
     <thead>
         <tr>
-            <th></th><th></th>
-        </tr>
-        <tr>
             <th>태그</th>
             <th>특징</th>
         </tr>
@@ -160,11 +157,6 @@ HTML4 이전에는 &lt;div&gt;나 &lt;span&gt; 등이 사용. <br>
             <td>figure 안에 포함된 콘텐츠에 대한 설명을 제공하는 영역</td>
         </tr>
     </tbody>
-    <thead>
-        <tr>
-            <th></th><th></th><th></th>
-        </tr>
-    </thead>
 </table>
 
 

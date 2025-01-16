@@ -48,7 +48,7 @@ permalink: /intro/
 
 
 <details style="border: 0; text-align: end">
-<summary style="list-style: none;">도전에 앞서 할 수 있냐고 묻는 나에게</summary>
+<summary style="list-style: none; cursor: default;">도전에 앞서 할 수 있냐고 묻는 나에게</summary>
 <br>
 할 수 있는 것, 하고 싶은 것만 한다면<br>
 &emsp;&emsp;내일도 어제와 다를 수 없다.<br>

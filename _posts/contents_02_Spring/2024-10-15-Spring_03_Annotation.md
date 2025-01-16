@@ -116,9 +116,9 @@ public class TestController {
 	@Autowired // DB와 연결할 객체 @Repository를 필드 멤버로 활용
 	private Dao dao;
 
-	@GetMapping("/") // 요청 페이지가 없는 경우 welcome 페이지로 redirect
+	@GetMapping("/") // 요청 페이지가 없는 경우 welcome 페이지로 forward
 	public String index() {
-		return "index"; // welcome page
+		return "index"; // welcome page : templates/index.html "thymeleaf"
 	}
 	@PostMapping("search") // 검색어를 전달하며 페이지를 요청할 경우 FormBean에 저장하여 Dao 메서드 호출
 	public String search(Bean bean, org.springframework.ui.Model model) {

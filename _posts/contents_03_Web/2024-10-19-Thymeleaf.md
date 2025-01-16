@@ -50,12 +50,12 @@ SPA(Single Page Application)화면 : 비동기 처리(Ajax)등 <br>
     .exp td:Nth-of-type(2) {
         text-align: center;
     }
-    table {
+    /* table {
         font-size: 1.1rem;
     }
     .desc {
         font-size: 1.2rem;
-    }
+    } */
 </style>
 
 <table class="exp">
@@ -132,11 +132,6 @@ SPA(Single Page Application)화면 : 비동기 처리(Ajax)등 <br>
             </td>
         </tr>
     </tbody>
-    <thead>
-        <tr>
-            <th></th><th></th><th></th>
-        </tr>
-    </thead>
 </table>
 
 <br>
@@ -151,11 +146,6 @@ SPA(Single Page Application)화면 : 비동기 처리(Ajax)등 <br>
 
 
 <table markdown="1" class="desc">
-    <thead>
-        <tr>
-            <th></th><th></th><th></th>
-        </tr>
-    </thead>
     <thead>
         <tr>
             <th>예약어</th><th>설명</th><th>예시</th>
@@ -445,11 +435,6 @@ SPA(Single Page Application)화면 : 비동기 처리(Ajax)등 <br>
             </td>
         </tr>
     </tbody>
-    <thead>
-        <tr>
-            <th></th><th></th><th></th>
-        </tr>
-    </thead>
 </table>
 
 
@@ -591,13 +576,13 @@ JavaScript 없이도 정적인 HTML 파일로 작동할 수 있도록 고안되�
 **부모 템플릿의 layout:fragment로 지정된 부분에 자식 템플릿의 내용이 삽입**. <br>
 
 
-<pre class="rec bg-bk">
+<pre class="rec bg-bk"><code>
 - 주요 체크리스트 <br>
 1.	자식 템플릿에 layout:decorate를 지정하고, layout:fragment는 설정하지 않음. <br>
 2.	부모 템플릿에 layout:fragment로 삽입될 위치 지정. <br>
 3.	프래그먼트 파일에서 불필요한 &lt;html&gt;, &lt;head&gt;, &lt;body&gt; 태그를 제거. <br>
 4.	파일 경로 및 th:replace 참조가 정확한지 확인. <br>
-</pre>
+</code></pre>
 
 
 <br>

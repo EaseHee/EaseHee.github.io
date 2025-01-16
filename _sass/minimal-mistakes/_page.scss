@@ -157,46 +157,49 @@ body {
     border-radius: 4px;
   }
 
-  /* 키워드 (public, class 등) */
-  pre code .k, 
-  pre code .kd { color: #c792ea; font-weight: bold; }
+  // /* 키워드 (public, class 등) */
+  // pre code .k, 
+  // pre code .kd { color: #c792ea; font-weight: bold; }
 
-  /* 문자열 */
-  pre code .s { color: #c3e88d; }
+  // /* 문자열 */
+  // pre code .s { color: #c3e88d; }
 
-  /* 함수, 메서드 이름 */
-  pre code .f, 
-  pre code .nf { color: #ffcb6b; font-style: italic; }
+  // /* 함수, 메서드 이름 */
+  // pre code .f, 
+  // pre code .nf { color: #ffcb6b; font-style: italic; }
 
-  /* 주석 */
-  pre code .c, 
-  pre code .cm, 
-  pre code .c1 { color: #7f848e; font-style: italic; }
+  // /* 주석 */
+  // pre code .c, 
+  // pre code .cm, 
+  // pre code .c1 { color: #7f848e; font-style: italic; }
 
-  /* 클래스 이름 */
-  pre code .nc { color: #82aaff; }
+  // /* 클래스 이름 */
+  // pre code .nc { color: #82aaff; }
 
-  /* 타입 (int, String 등) */
-  pre code .kt { color: #ffcb6b; }
+  // /* 타입 (int, String 등) */
+  // pre code .kt { color: #ffcb6b; }
 
-  /* 속성/변수 이름 */
-  pre code .na,
-  pre code .nb { color: #c3e88d; }
+  // /* 속성/변수 이름 */
+  // pre code .na,
+  // pre code .nb { color: #c3e88d; }
 
-  /* 리터럴 (숫자, 문자열 등) */
-  pre code .nl { color: #f78c6c; }
+  // /* 리터럴 (숫자, 문자열 등) */
+  // pre code .nl { color: #f78c6c; }
 
-  /* 연산자 (operators) */
-  pre code .o,
-  pre code .p { color: #d4d4d4; }
+  // /* 연산자 (operators) */
+  // pre code .o,
+  // pre code .p { color: #d4d4d4; }
 
-  /* 일반 이름 (variables, parameters) */
-  pre code .n { color: #dcdcdc; }
+  // /* 일반 이름 (variables, parameters) */
+  // pre code .n { color: #dcdcdc; }
 
   /* details (토글) 태그 설정 */
-  details{
+  details {
     // margin-top: 0.5%;
     padding: 0.5%;
+    summary {
+      cursor: pointer;
+    }
   }
   details /* details */ {
     border: solid 0.1px gray;

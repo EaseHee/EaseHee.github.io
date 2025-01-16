@@ -28,9 +28,6 @@ Servlet 객체를 활용하여 페이지를 이동시키는 경우에 forward �
 <table>
     <thead>
         <tr>
-            <th></th><th></th><th></th>
-        </tr>
-        <tr>
             <th></th>
             <th>redirect</th>
             <th>forward</th>
@@ -63,11 +60,6 @@ Servlet 객체를 활용하여 페이지를 이동시키는 경우에 forward �
             <td>O : 요청과 응답 객체 공유 <br> 서블릿, JSP 페이지 간 데이터 전달 용이</td>
         </tr>
     </tbody>
-    <thead>
-        <tr>
-            <th></th><th></th><th></th>
-        </tr>
-    </thead>
 </table>
 
 Controller에 요청을 하는 경우 
