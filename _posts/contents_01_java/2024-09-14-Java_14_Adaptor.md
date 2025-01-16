@@ -63,18 +63,18 @@ public Class Main {
 
 <pre><code>
 public interface Sleepable {
-    static voie sleep() {
+    static void sleep() {
         System.out.println("Sleep");
     }
 }
 
 public interface Walkable {
-    static voie walk() {
+    static void walk() {
         System.out.println("Walk");
     }
 }
 public interface Eatable {
-    static voie eat() {
+    static void eat() {
         System.out.println("Eat");
     }
 }
