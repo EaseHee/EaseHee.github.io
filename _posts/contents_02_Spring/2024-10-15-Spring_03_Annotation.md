@@ -33,7 +33,7 @@ Annotation은 주석이라는 뜻이지만 프로그래밍에서는 컴파일에
 # 1> 의존성 주입
 객체 간 의존성 관리 및 구성 요소 선언 <br>
 
-<h1>☑️ org.springframework.stereotype</h1>
+<h3>☑️ org.springframework.stereotype</h3>
 
 <details>
 <summary class="summary-title">@Component</summary>
@@ -132,7 +132,7 @@ public class TestController {
 </details>
 
 
-<h1>☑️ org.springframework.beans.factory.annotation</h1>
+<h3>☑️ org.springframework.beans.factory.annotation</h3>
 
 <details>
 <summary class="summary-title">@Autowired</summary>
@@ -275,7 +275,7 @@ public class MyProcess {
 </details>
 
 
-<h1>☑️ org.springframework.context.annotation</h1>
+<h3>☑️ org.springframework.context.annotation</h3>
 
 <details>
 <summary class="summary-title">@Bean</summary>
@@ -1377,7 +1377,7 @@ public class LoggingAdvice {
 </details>
 
 
-<h1>☑️ org.aspectj.lang.annotation</h1>
+<h3>☑️ org.aspectj.lang.annotation</h3>
 
 <h3>JdkRegexpMethodPointcut : 정규 표현식을 이용하여 Pointcut을 정의</h3>
 <h3>AspectJExpressionPointcut : AspectJ 정규 표현식을 이용하여 Pointcut을 정의</h3>
@@ -1489,7 +1489,7 @@ public Object logging(ProceedingJoinPoint joinPoint) throws Throwable {
 # 3> Web Layer
 Spring MVC와 관련된 웹 어플리케이션 개발에 사용되는 어노테이션
 
-<h1>☑️ org.springframework.web.bind.annotation</h1>
+<h3>☑️ org.springframework.web.bind.annotation</h3>
 
 <details>
 <summary class="summary-title">@RequestMapping</summary>
@@ -2339,7 +2339,7 @@ public @interface PathVariable {
 
 데이터베이스 및 ORM 관련 어노테이션 <br>
 
-<h1>☑️ javax.persistence</h1>
+<h3>☑️ javax.persistence</h3>
 
 <details>
 <summary class="summary-title">@Entity</summary>
@@ -2464,7 +2464,7 @@ public @interface PathVariable {
 # 5> Transaction
 트랜젝션 처리 어노테이션
 
-<h1>☑️ org.springframework.transaction.annotation</h1>
+<h3>☑️ org.springframework.transaction.annotation</h3>
 
 <details>
 <summary>@Transactional</summary>

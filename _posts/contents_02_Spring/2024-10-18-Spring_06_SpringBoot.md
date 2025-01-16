@@ -371,7 +371,7 @@ public class DispatcherServlet extends FrameworkServlet {
 <summary>[legacy] ver</summary>
     
 
-## springweb01_jsp 
+### springweb01_jsp 
 - Client(index.html) → Controller → View(list.jsp) <br>
 
     <details>
@@ -1162,7 +1162,7 @@ public class DispatcherServlet extends FrameworkServlet {
 <hr>
 
 
-## springweb02_jsp
+### springweb02_jsp
 - Login & Input
 
     <details>
@@ -1411,7 +1411,7 @@ public class DispatcherServlet extends FrameworkServlet {
     </details>
 
 
-## springweb_03_jsp
+### springweb_03_jsp
 - 구구단 요청 및 출력 예제
 
 

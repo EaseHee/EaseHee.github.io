@@ -41,7 +41,7 @@ tags:
 @Repository 스테레오 타입의 객체가 중추 역할을 수행한다. <br>
 <br>
 
-- ### 1. PreparedStatement 사용
+- ## 1. PreparedStatement 사용
 > @Repository에서 직접 Connection 객체를 반환
 <pre><code>
 preparedStatement = connection.prepareStatement("SELECT no, name FROM emp");
@@ -57,7 +57,7 @@ while(resultSet.next()) {
 <br>
 
 
-- ### 2. JdbcDaoSupport 상속
+- ## 2. JdbcDaoSupport 상속
 > @Repository에서 JdbcDaoSupport의 setDataSource()를 호출하여 DataSource를 전달. <br>
 RowMapper 인터페이스의 mapRow() 메서드 오버라이딩. <br>
 jdbcTemplate 객체의 query()를 호출하여 쿼리문과 매퍼를 인자로 전달. <br>
@@ -249,7 +249,7 @@ public class Main {
 
 --- 
 
-#### ❌ 오류 : 'dataSource' or 'jdbcTemplate' is required
+### ❌ 오류 : 'dataSource' or 'jdbcTemplate' is required
 <details>
 <summary>DB 연결 오류</summary>
 <pre><code>
@@ -269,7 +269,7 @@ public class Main {
 <br>
 
 
-- ### 3. MyBatis 
+- ## 3. MyBatis 
 > 
 1> <strong>&lt;mapper&gt;</strong>를 이용한 방식 <br> 
 DataMapper.xml에 쿼리문을 분리하여 관리. <br>
@@ -355,7 +355,7 @@ public interface SqlMapperInter {
 <br>
 
 
-- ### 4. JPA
+- ## 4. JPA
 > Entity 객체 : DB 테이블에 매핑할 클래스 <br>
 persistance.xml에 DB연결 정보 등 저장 <br>
 <strong>@Entity</strong> Annotation 활용 <br>
@@ -394,7 +394,7 @@ public class MemEntity {
 
 <hr>
 
-- ### 테이블을 조인하는 경우 <br>
+- ## 테이블을 조인하는 경우 
 @JoinColumn(name="필드명", referencedColumnName="참조 테이블 필드명") <br>
 <br>
 JPQL 작성 시 Entity(클래스)를 기준으로 작성하기 때문에 <br>
