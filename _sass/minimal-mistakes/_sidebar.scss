@@ -10,12 +10,14 @@
   @include clearfix();
   // @include breakpoint(max-width $large) {
   //   /* fix z-index order of follow links */
-    position: fixed;
-    top: 120px; /* 헤더 높이에 따라 조정 */
+  position: relative;
+  top: 120px; /* 헤더 높이에 따라 조정 */
   //   z-index: 10;
   //   -webkit-transform: translate3d(0, 0, 0);
   //   transform: translate3d(0, 0, 0);
   // }
+  width: 25%; /* 사이드바 너비 */
+  max-width: 300px; /* 최대 너비 제한 */
 
   @include breakpoint($large) {
     float: inline-start;
@@ -281,7 +283,7 @@
     }
   }
 
-  &:after {
+  &::after {
     display: block;
     content: "";
     position: absolute;

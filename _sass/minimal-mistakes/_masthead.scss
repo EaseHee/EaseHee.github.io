@@ -10,13 +10,9 @@
   // -webkit-animation-delay: 0.15s;
   // animation-delay: 0.15s;
   // z-index: 20;
-  position: fixed; /* 상단 고정 */
-  top: 0; /* 화면의 맨 위 */
-  left: 0;
+  position: relative; /* 상단 고정 */
   width: 100%; /* 화면 너비에 맞추기 */
   z-index: 1000; /* 다른 요소 위에 배치 */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-  padding: 10px 0; /* 상하 여백 조정 */
 
   &__inner-wrap {
     @include clearfix;

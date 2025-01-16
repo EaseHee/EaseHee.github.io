@@ -510,6 +510,9 @@
   -webkit-box-shadow: $box-shadow;
   box-shadow: $box-shadow;
 
+  overflow-wrap: break-word;
+  // white-space: nowrap;
+
   .nav__title {
     color: #fff;
     font-size: $type-size-6;

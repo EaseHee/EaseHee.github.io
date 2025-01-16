@@ -118,7 +118,7 @@ author:
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "GeonHee Lee"
   location         : "Seoul, Korea"
-  email            : "geonhee@naver.com"
+  email            : #"geonhee@naver.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -286,7 +286,7 @@ whitelist:
 #  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
-  path: /categories/
+  path: /categories/:name/
 tag_archive:
   type: liquid
   path: /tags/
@@ -298,9 +298,9 @@ tag_archive:
 #   layouts:
 #     category: archive-taxonomy
 #     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
+  # permalinks:
+  #   category: /categories/:name/
+  #   tag: /tags/:name/
 
 category_order:
   - Java
@@ -329,6 +329,9 @@ defaults:
       path: "" # 모든 경로
       type: posts
     values:
+      sidebar:
+        - title: ""
+          text: ""
       layout: single
       author_profile: true
       read_time: true

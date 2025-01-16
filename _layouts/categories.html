@@ -1,21 +1,23 @@
-<!-- ---
+---
 layout: archive
 ---
 
-{{ content }}
+<div role="main">
+  <!-- Sidebar -->
+  <div class="sidebar">
+    {% include sidebar.html %}
+  </div>
 
-{% include posts-taxonomy.html taxonomies=site.categories %} -->
----
-layout: default
----
-
-<h1>{{ page.title }}</h1>
-<ul>
-  {% for post in site.categories[page.category] reversed %}
-  <li>
-    <a href="{{ post.url }}">{{ post.title }}</a> – {{ post.date | date: "%Y-%m-%d" }}
-  </li>
-  {% endfor %}
-</ul>
-
-<a href="/categories/">← Back to Categories</a>
+  <!-- Main Content -->
+  <div>
+    <h1>{{ page.title }}</h1>
+    <ul>
+      {% for post in site.categories[page.category] reversed %}
+      <li>
+        <a href="{{ post.url }}">{{ post.title }}</a> – {{ post.date | date: "%Y-%m-%d" }}
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="/categories/">← Back to Categories</a>
+  </div>
+</div>
